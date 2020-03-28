@@ -3,7 +3,7 @@ function shopping(work1, work2) {
     const buyTv50 = work1 && work2
     // const buyTv32 = !!(work1 ^ work2) // bitwise xor
     const buyTv32 = work1 != work2
-    const keepHealthy = !buyIceCream // unario
+    const keepHealthy = !buyIceCream // unary operators
 
     return { buyIceCream, buyTv50, buyTv32, keepHealthy }
 }
