@@ -1,7 +1,7 @@
 const name = "Alberto"
-const concatenation = "Olá " + name + "!"
+const concatenation = "Hello " + name + "!"
 const template = `
-    Olá
+    Hello
     ${name}!`
 
 console.log(concatenation, template)
@@ -11,4 +11,4 @@ console.log(concatenation, template)
 console.log(`1 + 1 = ${1 + 1}`)
 
 const up = text => text.toUpperCase()
-console.log(`Ei... ${up('cuidado')}!`)
+console.log(`Hey... ${up('Attention')}!`)

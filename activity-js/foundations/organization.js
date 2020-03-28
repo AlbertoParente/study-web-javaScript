@@ -1,4 +1,4 @@
-console.log("Sentença de codigo")
+console.log("Code sentence...")
 
 {
     console.log("Hello");

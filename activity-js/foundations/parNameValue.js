@@ -11,7 +11,7 @@ const client = {
     age: 27,
     weigth: 70,
     adress: {
-        street: 'Rua teste',
+        street: 'Street teste',
         number: 13,
     }
 }
