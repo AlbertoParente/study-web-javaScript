@@ -1,3 +1,4 @@
+// Dynamic collection of key/value pairs
 const product = new Object
 product.name = 'Chair'
 product['Product brand'] = 'Generic'

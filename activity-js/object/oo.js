@@ -14,3 +14,9 @@ object = {
 }
 
 object.processing()
+
+// Princípios Importantes:
+// Abstraction
+// Encapsulation
+// Heritage (Prototype)
+// Polymorphism
