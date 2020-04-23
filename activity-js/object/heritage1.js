@@ -1,5 +1,5 @@
 const ferrari = {
-    modelo: 'F40',
+    model: 'F40',
     speedMax: 324
 }
 
