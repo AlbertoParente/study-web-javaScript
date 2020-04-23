@@ -11,12 +11,12 @@ console.log(obj2)
 function Product(name, price, desc) {
     this.name = name
     this.getPriceWithDescount = () => {
-        return price = (1 - desc)
+        return price * (1 - desc)
     }
 }
 
 const p1 = new Product('Shirt', 7.99, 0.10)
-const p2 = new Product('Notebook', 7.99, 0.10)
+const p2 = new Product('Notebook', 3000, 0.10)
 console.log(p1.getPriceWithDescount(), p2.getPriceWithDescount())
 
 // Finction Factory
