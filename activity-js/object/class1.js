@@ -9,16 +9,16 @@ class FinancialCycle {
     constructor(month, year) {
         this.month = month,
         this.year = year,
-        this.launch = []
+        this.launches = []
     }
 
-    addLaunch(...launch) {
-        launch.forEach(l => this.launch.push(l))
+    addLaunches(...launch) {
+        launches.forEach(l => this.launches.push(l))
     }
 
     summary() {
         let valueConsolidated = 0
-        this.launch.forEach(l => {
+        this.launches.forEach(l => {
             valueConsolidated += l.value
         })
         return valueConsolidated
@@ -29,5 +29,5 @@ const salary = new Launch('Salary', 4000)
 const electricityBill = new Launch('Electricity', -60)
 
 const bills = new FinancialCycle(4, 2020)
-bills.addLaunch(salary, electricityBill)
+bills.addLaunches(salary, electricityBill)
 console.log(bills.summary())
