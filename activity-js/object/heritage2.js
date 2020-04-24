@@ -1,5 +1,6 @@
 // Prototype chain
-Object.prototype.attr0 = '0'
+Object.prototype.attr0 = '0' // Avoid doing this!
+
 const grandfather = { attr1: 'A' }
 const father = { __proto__: grandfather, attr2: 'B', attr3: '3' }
 const child = { __proto__: father , attr3: 'C' }
@@ -16,7 +17,7 @@ const car = {
         }
     },
     status() {
-        return `${this.speedActual}Km/h de ${this.speedMax}Km/h`
+        return `${this.speedActual}Km/h of ${this.speedMax}Km/h`
     }   
 }
 
@@ -41,5 +42,5 @@ console.log(volvo)
 volvo.speedUp(100)
 console.log(volvo.status())
 
-volvo.speedUp(300)
+ferrari.speedUp(300)
 console.log(ferrari.status())

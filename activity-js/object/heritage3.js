@@ -1,5 +1,5 @@
 const father = { name: 'Alberto', colorHair: 'Black' }
-
+ 
 const daughter1 = Object.create(father)
 daughter1.name = 'Juliana'
 console.log(daughter1.colorHair)

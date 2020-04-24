@@ -8,17 +8,21 @@ console.log(Object.keys(person))
 console.log(Object.values(person))
 console.log(Object.entries(person))
 
-Object.entries(person).forEach(([key, value]) => {
+Object.entries(person).forEach(e => {
     console.log(`${e[0]}: ${e[1]}`)    
 })
 
-Object.defineProperties(person, 'dateOfBirth', {
-    enumerable: true,
-    writable: false,
-    value: '2020/01/01'
+Object.entries(person).forEach(([key, value]) => {
+    console.log(`${key}: ${value}`)    
 })
 
-person.dateOfBirth = '1998/01/01'
+Object.defineProperty(person, 'dateOfBirth', {
+    enumerable: true,
+    writable: false,
+    value: '2020/08/13'
+})
+
+person.dateOfBirth = '2029/08/13'
 console.log(person.dateOfBirth)
 console.log(Object.keys(person))
 

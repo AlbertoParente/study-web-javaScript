@@ -26,7 +26,7 @@ function createEmployee(name, baseSalary, faults) {
         baseSalary,
         faults,
         getSalaty() {
-            return (baseSalary = 30) * (30 - faults)
+            return (baseSalary / 30) * (30 - faults)
         }
     }
 }
