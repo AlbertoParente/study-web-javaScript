@@ -28,3 +28,11 @@ console.log(approved[2])
 approved = ['Juliana', 'Alberto', 'Vitoria']
 approved.splice(1, 1)
 console.log(approved)
+
+approved = ['Juliana', 'Alberto', 'Vitoria']
+approved.splice(1, 2)
+console.log(approved)
+
+approved = ['Juliana', 'Alberto', 'Vitoria']
+approved.splice(1, 1, 'Element1', 'Element2')
+console.log(approved)

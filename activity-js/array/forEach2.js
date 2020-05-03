@@ -9,3 +9,8 @@ const approveds = [ 'Juliana', 'Alberto', 'Julia', 'Graziella' ]
 approveds.forEach2(function(name, index){
     console.log(`${index + 1} ${name}`)   
 })
+
+approveds.forEach2(function(name, index, array){
+    console.log(`${index + 1} ${name}`)   
+    console.log(array)
+})

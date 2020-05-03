@@ -21,7 +21,7 @@ console.log(pilots)
 pilots.splice(3, 1)
 console.log(pilots)
 
-const somePilots1 = pilots.splice(2) // New array
+const somePilots1 = pilots.slice(2) // New array
 console.log(somePilots1)
 
 const somePilots2 = pilots.splice(1, 4)

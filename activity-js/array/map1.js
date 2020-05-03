@@ -7,7 +7,7 @@ let result = nums.map(function(e) {
 console.log(result)
 
 const sum10 = e => e + 10
-const triple = e => e *3
+const triple = e => e * 3
 const forMoney = e => `R$ ${parseFloat(e).toFixed(2).replace('.', ',')}`
 
 result = nums.map(sum10).map(triple).map(forMoney)
