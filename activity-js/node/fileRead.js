@@ -7,7 +7,7 @@ const content = fs.readFileSync(directory, 'UTF-8')
 console.log(content)
 
 // Asynchronous...
-fs.readFile(directory, 'UTF-8', (erro, content) => {
+fs.readFile(directory, 'UTF-8', (err, content) => {
     const config = JSON.parse(content)
     console.log(`${config.db.host}:${config.db.port}`)
 })
@@ -15,7 +15,7 @@ fs.readFile(directory, 'UTF-8', (erro, content) => {
 const config = require('./file.json')
 console.log(config.db)
 
-fs.readdir(__dirname, (erro, file) => {
+fs.readdir(__dirname, (err, file) => {
     console.log('Coontent of folder...')
     console.log(file)
 })
