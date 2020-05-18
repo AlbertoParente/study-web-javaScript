@@ -17,7 +17,7 @@ function parse() {
 
     for(let node of nodes) {
         for(var i = 0; i < node.possibleFirstElements.length; i++) {
-            //console.log(node.possibleFirstElements.length);
+            // console.log(node.possibleFirstElements.length);
             while(true) {
                 if(isVariable(node.possibleFirstElements[i])) {
                     let found = nodes.find((element) => 
@@ -59,7 +59,6 @@ function getPossibleFirstElements(node) {
     possibleFirstElements = possibleFirstElements.filter(
         (item, i, ar) => ar.indexOf(item) === i
     )
-
     return possibleFirstElements;
 }
 
