@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Activity HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Activity HTML</h1>
+    </header>
+    <nav>
+        <a href attrib-nav="activity/test.html">00 - test</a>
+        <a href attrib-nav="activity/test.html">Temp</a>
+    </nav>
+    <section id="content"></section>
+    <footer>
+        <br>
+        &copy; 2020 AlbertoParente. Todos os direitos reservados.
+    </footer>
+    <script>
+        document.querySelectorAll('[attrib-nav]').forEach(link => {
+            const content = document.getElementById('content')
+
+            link.onclick = function(e) {
+                e.preventDefault()
+                fetch(link.getAttribute('attrib-nav'))
+                    .then(resp => resp.text())
+                    .then(html => content.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>
