@@ -1,0 +1,49 @@
+<h1>Project</h1>
+<span attrib-folder>Disco Local (C:)</span>
+<ul class="tree">
+    <li>
+        <span attrib-folder>Backend</span>
+        <ul>
+            <li>
+                <span attrib-folder>app</span>
+                <ul>
+                    <li>product.js</li>
+                    <li>user.js</li>
+                    <li>sale.js</li>
+                </ul>
+            </li>
+            <li>
+                <span attrib-folder>config</span>
+                <ul>
+                    <li>bank.js</li>
+                    <li>routes.js</li>
+                    <li>server.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span attrib-folder>frontend</span>
+        <ul>
+            <li>
+                <span attrib-folder>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="nestedList.css">
+<script>
+    document.querySelectorAll('[attrib-folder]').forEach(folder => {
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const disp = ul.style.display
+            ul.style.display = disp === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
