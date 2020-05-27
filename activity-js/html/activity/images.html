@@ -1,4 +1,4 @@
-<div >
+<div attrib-slider>
     <p>
         <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da Cidade" width="513" height="342"
             title="Muro da Cidade por Tarso Bessa">
@@ -68,13 +68,40 @@
             elem.style.left = newStart + 'px'
             setTimeout(() => moving(elem, newStart, end, step, callback), 7)
         } else {
-            Callback()
+            callback()
         }
     }
-
+/*
     const p = document.querySelector('[attrib-slider] > p')
     p.style.display = 'block'
     moving(p, 1500, -520, 5, () => {
         console.log('Finished...!')
-    })
+    }) */
+
+    function slider() {
+        const elements = document.querySelectorAll('[attrib-slider] > p')
+        const slides = Array.from(elements)
+        showSlider(slides, slides[0])
+    }
+
+    function showSlider(slides, slide) {
+        slide.style.display = 'block'
+
+        const start = innerWidth
+        const end = -slide.clientWidth
+
+        slide.style.left = `${start}px`
+
+        moving(slide, start, end, 5, () => {
+            slide.style.display = 'none'
+            showSlider(slides, getNext(slides, slide))
+        })
+    }
+
+    function getNext(list, actual) {
+        const i = list.indexOf(actual) + 1
+        return i < list.lenght ? list[i] : list[0]
+    }
+
+    slider()
 </script>
