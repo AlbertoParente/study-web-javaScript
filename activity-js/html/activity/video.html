@@ -29,3 +29,22 @@
         width: 0%;
     }
 </style>
+
+<script>
+    function configVideo(id) {
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false
+
+        document.querySelector(`[attrib-play=${id}]`).onclick = e => video.play()
+        document.querySelector(`[attrib-pause=${id}]`).onclick = e => video.pause()
+
+        setInterval(() => {
+            const percent = (video.currentTime / video.duration) * 100
+            const valueDiv = document.querySelector(`[attrib-progress=${id}] > div`)
+            valueDiv.style.width = `${percent}%`
+            valueDiv.innerHTML = `${percent.toFixed(1)}%`
+        }, 500);
+    }
+
+    configVideo('myVideo')
+</script>
