@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Anatomy</title>
+    <style>
+        .selector {
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            /* Multiple values */
+            border: solid 5px navy; /* Shorthand property */
+            font-family: Helvetica, sans-serif;
+            /* Function */
+            width: calc(100% - 40px);
+            background-color: rgb(34, 153, 189);
+        }
+
+        /* Using a heavyweight class ":" */
+        .selector:hover {
+            background-color: purple;
+        }
+
+        /* Using a heavyweight element "::" */
+        .selector::first-letter {
+            font-size: 60px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="selector">Content</div>
+</body>
+
+</html>
