@@ -9,7 +9,7 @@
 
 function parse() {
     // const input = 'S->A|B;A->aA|a;B->bB|c'
-    const input = 'S->A|B; A->aA|a; B->bB|c; C->c|c'
+    const input = 'S->A|B; A->aA|a; B->CB|c; C->c|c'
 
     // const gramatic = document.getElementById("input").value.replace(/ /g, "");
     const gramatic = input.replace(/ /g, "")
@@ -51,8 +51,8 @@ function getPossibleFirstElements(node) {
         possibleFirstElements.push(node[node.indexOf("|") + 1]).toString()
     }
 
-    if(node.includes("E")) {
-        possibleFirstElements.push("E").toString()
+    if(node.includes("&")) {
+        possibleFirstElements.push("&").toString()
     }
 
     // Turning into a distinct array
