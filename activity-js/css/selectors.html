@@ -6,7 +6,90 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        
+        section > span:nth-of-type(2) { 
+            color: #ffff00;
+            background-color: #ff7777;
+        }
+        /*
+        section > :nth-child(even) label { 
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        section > :nth-child(even), ul, p { 
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /* even children
+        section > :nth-child(even) { 
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /* odd children
+        section > :nth-child(odd) {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        span:nth-child(1) {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        [fair*=s] {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        [fair~=office] {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        [fair=house] {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        [fair] {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        p ~ ol {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        p + ul {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        #nested section {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        #nested > div {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        #aproveds {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+        /*
+        .tag {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
+
+       /* * {
+            color: #ffff00;
+            background-color: #ff7777;
+        }*/
     </style>
 </head>
 
@@ -14,11 +97,11 @@
     <div class='tag'>
         <div class='tag'>
             <p class='tag'>1</p>
-            <ul class='tag' feira='house'>
-                <li>Rice</li>
+            <ul class='tag' fair='house'>
+            <li>Rice</li>
                 <li>Bean</li>
             </ul>
-            <ul class='tag' feira='office company'>
+            <ul class='tag' fair='office company'>
                 <li>Coffee</li>
                 <li>Water</li>
             </ul>
@@ -29,7 +112,7 @@
             </ol>
             <div id='nested' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
