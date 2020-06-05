@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Specificity</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+        p {
+            background-color: #aaa;
+        }
+
+        .observation {
+            background-color: blue;
+            border: dashed 5px;
+            padding: 200px!important;
+            font-size: 40px;
+        }
+
+        p.observation {
+            padding: 2px;
+            background: linear-gradient(to right, red, yellow);
+        }
+    </style>
+</head>
+
+<body>
+    <p class='observation'>Look at that observation!</p>
+</body>
+
+</html>
