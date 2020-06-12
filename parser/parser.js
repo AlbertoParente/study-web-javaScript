@@ -1,79 +1,26 @@
-/* 
-    Nós:
-    S → A | B
-    A → aA | a
-    B → bB | c
-    Expressão passada:
-    S->A|B:A->aA|a:B->bB|c
-*/
+const prompt = require("prompt-sync")()
+console.log("\nAs expressões são divididas pelo ';' ...")
+console.log("\nExemplo de expressões validas: \n\" S->AB;A->aA|a;B->bB|b \"")
+console.log("\" S->ABCDE;A->a|0;B->b|0;C->c;D->d|0;E->e|0 \"")
+console.log("\" S->A|B;A->aA|a;B->CB|c;C->c|c \"")
+console.log("\" S->cAa;A->cB|B;B->bcB|0 \"\n")
+const expression = prompt("Por Favor insira uma expressão valida: ")
 
-function parse() {
-    // const input = 'S->A|B;A->aA|a;B->bB|c'
-    const input = 'S->A|B; A->aA|a; B->CB|c; C->c|c'
+var productionsFirsts = require("./first")(expression)
+var productionsFollowers = require("./follow")(expression)
+var table = require("./table")(expression)
 
-    // const gramatic = document.getElementById("input").value.replace(/ /g, "");
-    const gramatic = input.replace(/ /g, "")
-    let nodes = retrieveNodes(gramatic);
-
-    for(let node of nodes) {
-        for(var i = 0; i < node.possibleFirstElements.length; i++) {
-            // console.log(node.possibleFirstElements.length);
-            while(true) {
-                if(isVariable(node.possibleFirstElements[i])) {
-                    let found = nodes.find((element) => 
-                    element.variable === node.possibleFirstElements[i]
-                    )
-                    node.possibleFirstElements = node.possibleFirstElements.filter((possibleFirstElement) =>
-                    possibleFirstElement !== node.possibleFirstElements[i]
-                    )
-                    node.possibleFirstElements = node.possibleFirstElements.concat(
-                        found.possibleFirstElements
-                    )
-                } else {
-                    node.terminalSymbols.push(node.possibleFirstElements[i])
-                    break
-                }
-            }
-        }
-    }
-    console.log(nodes);
+console.log("============================================================")
+console.log("====================\tFirsts\t============================")
+for(let productionFirst of productionsFirsts) {
+  console.log("First " + productionFirst.variable + " = " + productionFirst.firsts)
 }
 
-function isVariable(char) {
-    return char === char.toUpperCase() ? true : false;
+console.log("============================================================");
+console.log("====================\tFollowers\t====================")
+for(let productionFollower of productionsFollowers) {
+  console.log("Follow " + productionFollower.variable + " = " + productionFollower.followers)
 }
-
-function getPossibleFirstElements(node) {
-    let possibleFirstElements = []
-    possibleFirstElements.push(node.split("->")[1][0]).toString();
-
-    if(node.includes("|")) {
-        possibleFirstElements.push(node[node.indexOf("|") + 1]).toString()
-    }
-
-    if(node.includes("&")) {
-        possibleFirstElements.push("&").toString()
-    }
-
-    // Turning into a distinct array
-    possibleFirstElements = possibleFirstElements.filter(
-        (item, i, ar) => ar.indexOf(item) === i
-    )
-    return possibleFirstElements;
-}
-
-function retrieveNodes(gramatic) {
-    let nodes = []
-    let nodesTemp = gramatic.split(";")
-
-    for(let nodeTemp of nodesTemp) {
-        nodes.push({
-            variable: nodeTemp[0],
-            possibleFirstElements: getPossibleFirstElements(nodeTemp),
-            terminalSymbols: [],
-        })
-    }
-    return nodes
-}
-
-parse()
+console.log("============================================================")
+console.log("====================\tPreditive Table\t====================")
+console.table(table)
