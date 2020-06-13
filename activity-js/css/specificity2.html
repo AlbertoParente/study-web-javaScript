@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Specificity</title>
+    <style>
+        /* https://specificity.keegan.st/ */
+
+        body {
+            front-size: 40px;
+        }
+
+        div {
+            background-color: blue;
+            color: white;
+        }
+
+        div[atrrib-col] {
+            background-color: darkorange;
+        }
+
+        div.style {
+            background-color: green;
+        }
+
+
+        #unique1, #unique2 {
+            background-color: black;
+        }
+
+        div:hover, #unique1:hover {
+            background-color: purple;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="unique1" class="style" style="background-color: red;">
+        #unique1 vs .style vs inline
+    </div>
+    <div id="unique2" class="style">#unique2 vs .style</div>
+    <div class="style" atrrib-col>.style vs atrrib-col</div>
+    <div atrrib-col>atrrib-col</div>
+    <div class="style">.style</div>
+    <div>element</div>
+</body>
+
+</html>
