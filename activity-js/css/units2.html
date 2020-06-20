@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <title>Units #02</title>
     <style>
-        /* ... */
+        .outside {
+            position: relative;
+            background-color: orange;
+            height: 400px;
+            width: 400px;
+            padding: 50px;
+        }
+
+        .inside {
+            background-color: mediumvioletred;
+            height: 100px;
+            width: 100%;
+            position: static; /* content */
+            position: relative; /* content */
+            position: absolute; /* content + padding */
+            position: fixed; /* viewport */
+        }
     </style>
 </head>
 <body>
-    <div class="inside">
-        <div class="outside"></div>
+    <div class="outside">
+        <div class="inside"></div>
     </div>
 </body>
 </html>
