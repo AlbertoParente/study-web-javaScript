@@ -20,6 +20,26 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns: [start_] 1fr [half-1 midlle-1] 1fr [half-1 midlle-1] 1fr [end_];
+            grid-template-rows: repeat(3, 1fr);
+
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            grid-gap: 50px 10px;
+            grid-gap: 10px;
+        }
+
+        .d1 {
+            grid-column-start: half-2;
+            grid-column-end: end_;
+            grid-column: midlle-1 / end_;
+            grid-row: 1 / span 2;
+            /* row-start column-start row-end column-end */
+            grid-area: 1 / midlle-1 / span 3 / end_;
+        }
     </style>
 </head>
 
