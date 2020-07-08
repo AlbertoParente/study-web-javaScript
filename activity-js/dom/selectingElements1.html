@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecting Elements #01</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="content activity">
+    <div id="first">#primeiro</div>
+    <div>Second</div>
+    <div class="third last">.third .last</div>
+    <script>              
+        document.getElementById('first').classList.add('highlight')
+
+        const divs = document.getElementsByTagName('div')
+        Array.from(divs).forEach(e => e.classList.remove('highlight'))
+
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('highlight'))
+
+        const lastElements = document.getElementsByClassName('last')
+        for(let e of lastElements) {
+            e.classList.remove('highlight')
+        }
+    </script>
+</body>
+</html>
