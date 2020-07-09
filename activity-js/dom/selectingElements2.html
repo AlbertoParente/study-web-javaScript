@@ -8,9 +8,32 @@
 <body class="content activity">
     <div id="first">#first</div>
     <div>Second</div>
-    <div class="third last"><span wb-attrib>.third .last</span></div>
+    <div class="third last"><span attrib>.third .last</span></div>
     <script>              
+        document.querySelector('#first').classList.add('highlight')
 
+        const selecting = seletor => 
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('highlight'))
+        const deselect = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('highlight'))
+
+        selecting('div')
+
+        deselect('*')
+        selecting('.third.last')
+
+        deselect('*')
+        selecting(':not(#first)')
+
+        deselect('*')
+        selecting(':not(#first)')
+
+        deselect('*')
+        selecting(':nth-child(1)')
+
+        deselect('*')
+        selecting('[attrib]')
+        
     </script>
 </body>
 </html>
