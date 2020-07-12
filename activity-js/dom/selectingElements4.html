@@ -22,7 +22,34 @@
         <p>End</p>
     </div>
     <script>
+        function log() {
+            console.log(this)
+        }
 
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        const list = document.querySelector('div ul')
+        list.parentNode.log()
+        list.childNodes.log()
+
+        const first = list.firstChild
+        first.log()
+        first.nextSibling.log()
+
+        const last = list.lastChild
+        last.log()
+        last.previousSibling.log()
+
+        list.children.log()
+        list.firstElementChild.log()
+        list.lastElementChild.log()
+        list.parentNode.previousElementSibling.log()
+        list.parentNode.nextElementSibling.log()
+
+        document.querySelectorAll('div ul li').log()
     </script>
 </body>
 
