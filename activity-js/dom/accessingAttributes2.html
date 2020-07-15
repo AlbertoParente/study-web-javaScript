@@ -17,7 +17,24 @@
         </ul>
     </div>
     <script>
-        
+        const list = document.querySelector('div ul[destiny="office"]')
+        console.log('Element "ul"............................')
+        console.log('childNodes', list.childNodes)
+        console.log('destiny', list.destiny)
+        console.log('getAttribute', list.getAttribute('destiny'))
+        console.log('hasAttribute', list.hasAttribute('destiny'))
+        list.setAttribute('destiny', 'company')
+        list.setAttribute('status', 'open')
+        list.removeAttribute('destiny')
+        console.log(list.dataset.urgency)
+        list.dataset.urgency = 4
+        console.log(list.getAttribute('data-urgency'))
+
+        // Caution
+        const label = document.querySelector('label')
+        console.log(label.for)
+        console.log(label.htmlFor)
+        console.log(label.getAttribute('for'))
     </script>
 </body>
 
