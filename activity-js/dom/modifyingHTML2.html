@@ -12,7 +12,14 @@
         <p>Initial Text</p>
     </div>
     <script>
-        
+        const div = document.querySelector('div')
+        div.innerHTML = 'Changed Text'
+        div.insertAdjacentHTML('beforedbegin', '<p>Before Begin</p>')
+        div.insertAdjacentHTML('afterbegin', '<p>After Begin</p>')
+        div.insertAdjacentHTML('beforedbend', '<p>Before End</p>')
+        div.insertAdjacentHTML('beforedbegin', '<p>After End</p>')
+
+        console.log(div.innerText)
     </script>
 </body>
 
