@@ -9,7 +9,32 @@
 
 <body class='content activity'>
     <script>
+        const body = document.querySelector('body')
+        const div1 = document.createElement('div')
+
+        div1.classList.add('highlight')
+        div1.innerHTML = 'first'
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('attribute', 'value')
+        div2.innerHTML = 'second'
         
+        const p = document.createElement('p')
+        p.innerHTML = 'third'
+
+        const div3 = document.createElement('div')
+        div3.appendChild(p)
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+        const text = document.createTextNode('Before...')
+        div3.insertBefore(text, div3.childNodes[0])
+
+        const div4 = div3.cloneNode(true)
+        body.appendChild(div4)
+        body.removeChild(div3)
     </script>
 </body>
 
