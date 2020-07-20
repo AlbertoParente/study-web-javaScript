@@ -9,9 +9,23 @@
 
 <body class="content activity">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- onclick="navigateEm5s(event)" -->
+        <a wait-a-minute href="https://google.com.br">Google</a>
     </div>
     <script>
-        
+        function navigateEm5s(e) {
+            e.preventDefault()
+            console.log('Get out in 5 seconds...')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+
+        // const a = document.querySelector('a')
+        // a.onclick = navigateEm5s
+
+        const a = document.querySelector('[wait-a-minute href]')
+        a.onclick = navigateEm5s
     </script>
 </body>
