@@ -15,6 +15,30 @@ function Barrier(reverse = false) {
     this.setHeightBarrier = heightBarrier => bodyBarrier.style.height = `${heightBarrier}px`
 }
 
-const b = new Barrier(true)
-b.setHeightBarrier(300)
-document.querySelector('[attr-flappy]').appendChild(b.element)
+// const b = new Barrier(true)
+// b.setHeightBarrier(300)
+// document.querySelector('[attr-flappy]').appendChild(b.element)
+
+function pairOfBarrier (height, opening, x) {
+    this.element = newElement('div', 'pair-of-barriers')
+
+    this.higher = new Barrier(true)
+    this.inferior = new Barrier(false)
+
+    this.element.appendChild(this.higher.element)
+    this.element.appendChild(this.inferior.element)
+
+    this.drawOpening = () => {
+        const topHeight = Math.random() * (height - opening)
+        const lowerHeight = height - opening - topHeight
+        this.higher.setHeightBarrier(topHeight)
+        this.inferior.setHeightBarrier(lowerHeight)
+    }
+
+    this.getX = () => parseInt(this.element.style.left.split('px')[0])
+    this.setX = x => this.element.style.left = `${x}px`
+    this.getWidth = () => this.element.clientWidth
+
+    this.drawOpening()
+    this.set(x)
+}
