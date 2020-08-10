@@ -42,3 +42,7 @@ function pairOfBarrier (height, opening, x) {
     this.drawOpening()
     this.set(x)
 }
+
+const b = pairOfBarrier(700, 200, 400)
+
+document.querySelector('[attr-flappy]').appendChild(b.element)
