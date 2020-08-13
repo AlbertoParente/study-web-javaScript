@@ -72,6 +72,14 @@ function Barriers(height, width, opening, space, notifyPoint) {
     }
 }
 
+function Bird(gameHeight) {
+    let flying = false
+    
+    this.element = newElement('img', 'bird')
+    this.element.src = 'img/bird.png'
+
+    this.getY = () => parser
+
 const barriers = new Barrier(700, 1200, 200, 400)
 const gameArea = document.querySelector('[attr-flappy]')
 barriers.pairs.forEach(pair => gameArea.appendChild(pair.element))
