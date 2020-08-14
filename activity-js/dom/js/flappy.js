@@ -100,13 +100,22 @@ function Bird(gameHeight) {
     this.setY(gameHeight / 2)
 }
 
-const barriers = new Barrier(700, 1200, 200, 400)
-const bird = new Bird(700)
-const gameArea = document.querySelector('[attr-flappy]')
+function Progress() {
+    this.element = newElement('span', 'progress')
+    this.updatePoints = points => {
+        this.element.innerHTML = points
+    }
+    this.updatePoints(0)
+}
 
-gameArea.appendChild(bird.element)
-barriers.pairs.forEach(pair => gameArea.appendChild(pair.element))
-setInterval(() => {
-    barriers.animate()
-    bird.animate
-}, 20)
+// const barriers = new Barrier(700, 1200, 200, 400)
+// const bird = new Bird(700)
+// const gameArea = document.querySelector('[attr-flappy]')
+
+// gameArea.appendChild(bird.element)
+// gameArea.appendChild(new Progress().element)
+// barriers.pairs.forEach(pair => gameArea.appendChild(pair.element))
+// setInterval(() => {
+//     barriers.animate()
+//     bird.animate
+// }, 20)
