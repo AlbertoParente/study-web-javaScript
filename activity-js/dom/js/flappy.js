@@ -119,3 +119,29 @@ function Progress() {
 //     barriers.animate()
 //     bird.animate
 // }, 20)
+
+function FlappyBird() {
+    let points = 0
+
+    const gameArea = document.querySelector('[attr-flappy]')
+    const height = gameArea.clientHeight
+    const width = gameArea.clientHeight
+
+    const progress = new Progress()
+    const barriers = new Barriers(height, width, 200, 400,
+        () => progress.updatePoints(++points))
+    const Bird = new Bird(height)
+
+    gameArea.appendChild(progress.element)
+    gameArea.appendChild(bird.element)
+    barriers.pairs;forEach(pair => gameArea.appendChild(pair.element))
+
+    this.start = () => {
+        const timer = setInterval(() => {
+            barriers.animate()
+            bird.animate()
+        }, 20)
+    }
+}
+
+new FlappyBird().start()
