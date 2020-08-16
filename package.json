@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
