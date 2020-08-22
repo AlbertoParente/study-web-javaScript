@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Fetch API #02</title>
+    <link rel='stylesheet' href='css/style.css'>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class="content activity">
+    <h1>Formulary Via Fetch</h1>
+    <form name="userForm" action="formulary" method="post">
+        <input type="text" name="name" placeholder="Name..." />
+        <input type="text" name="surname" placeholder="Surname..." />
+        <button>Salvar</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        document.userForm.onsubmit = async e => {
+            e.preventDefault()
+
+            const form = e.target
+            const data = new FormData(form)
+            data.append('ajax', true)
+
+            const options = {
+                method: form.method,
+                body: new URLSearchParams(date)
+            }
+
+            const result = document.getElementById('result')
+            // fetch(form.action, options)
+            //     .then(resp => resp.JSON())
+            //     .then(json => {
+            //         result.innerHTML = JSON.stringify(json)
+            //     })
+            //     .catch(e => {
+            //         result.innerHTML = e
+            //     })
+                try {
+                    const resp = await fetch(form.action, Options)
+                    const json = await resp.json()
+                    result.innerHTML = JSON.stringify(json)
+                } catch(e) {
+                    result.innerHTML = e
+                }
+        }
+    </script>
+</body>
