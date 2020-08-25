@@ -12,6 +12,12 @@
     <h1>States</h1>
 
     <script>
-        // Teste 1
+        const url = 'dados/states.json'
+        axios(url).then(resp => {
+            const itens = resp.data.reduce(
+                (html, state) => html + `<li>${state.name}</li>`, ''
+            )
+            document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`)
+        })
     </script>
 </body>
