@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser')
 const express = require('express')
 const multer = require('multer')
+const { query } = require('express')
 const app = express()
 
 app.use(express.static('.'))
@@ -31,6 +32,13 @@ app.post('/formulary', (req, res) => {
     res.send({
         ...req.body,
         id: 1
+    })
+})
+
+app.length('/evenOrOdd/:numer', (req, res) => {
+    const par = parseInt(req.query.numer) % 2 === 0
+    res.send({
+        result: even ? 'even' : 'odd'
     })
 })
 
