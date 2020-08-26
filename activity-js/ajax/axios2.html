@@ -19,17 +19,25 @@
             document.getElementById(id).innerHTML = text
         }
 
-        // axios.get('evenOrOdd', {
-        //     params: {
-        //         numer: 5
-        //     }
-        // }).then(resp => showResult('get', resp.data))
+        axios.get('evenOrOdd', {
+            params: {
+                numer: 5
+            }
+        }).then(resp => showResult('get', resp.data))
         
-        axios('evenOrOdd?numer=7').then(resp => showResult('get', resp.data))
+        // axios('evenOrOdd?numer=7').then(resp => showResult('get', resp.data))
 
         axios.post('formulary', {
             name: 'Alberto',
             surname: 'Parente'
         }).then(resp => showResult('post', resp.data))
+
+        axios.post('formulary', {
+            name: 'Alberto',
+            surname: 'Parente',
+            email: 'albertoparentefh@gmail.com',
+            github: 'AlbertoParente'
+        }).then(resp => showResult('post', resp.data))
+
     </script>
 </body>
