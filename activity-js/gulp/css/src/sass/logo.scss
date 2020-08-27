@@ -1,0 +1,13 @@
+aside.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+@media(max-width: $width-phone) {
+    aside.logo {
+        justify-content: center;
+    }
+}
