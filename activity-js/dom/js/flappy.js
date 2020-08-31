@@ -66,7 +66,6 @@ function Barriers(height, width, opening, space, notifyPoint) {
                 pair.setX(pair.getX() + space * this.pairs.length)
                 pair.drawOpening()
             }
-
             const middle = width / 2
             const crossedMiddle = pair.getX() + displacement >= middle && pair.getX() < middle
             
@@ -178,7 +177,7 @@ function FlappyBird() {
     const width = gameArea.clientWidth
 
     const progress = new Progress()
-    const barriers = new Barriers(height, width, 200, 400,
+    const barriers = new Barriers(height, width, 250, 400,
         () => progress.updatePoints(++points))
     const bird = new Bird(height)
 
