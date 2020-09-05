@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 
 const storage = multer.diskStorage({
     destination: function(req, res, callback) {
-        callback(null, '.')
+        callback(null, './upload')
     },
     filename: function(req, file, callback) {
         callback(null, `${Date.now()}_${file.originalname}`)
@@ -28,19 +28,19 @@ app.post('/upload', (req, res) => {
     })
 })
 
-app.post('/formulary', (req, res) => {
-    res.send({
-        ...req.body,
-        id: 1
-    })
-})
+// app.post('/formulary', (req, res) => {
+//     res.send({
+//         ...req.body,
+//         id: 1
+//     })
+// })
 
-app.length('/evenOrOdd/:numer', (req, res) => {
-    const par = parseInt(req.query.numer) % 2 === 0
-    res.send({
-        result: even ? 'even' : 'odd'
-    })
-})
+// app.length('/evenOrOdd/:numer', (req, res) => {
+//     const par = parseInt(req.query.numer) % 2 === 0
+//     res.send({
+//         result: even ? 'even' : 'odd'
+//     })
+// })
 
 // app.get('/test', (req, res) => res.send('Ok'))
 app.listen(8080, () => console.log('Server is running...'))
