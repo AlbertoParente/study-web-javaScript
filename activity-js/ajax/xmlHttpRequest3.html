@@ -28,20 +28,21 @@
                 }
             }
             xhr.send()
+
         }
 
         ajax({
             url: "dados/states.xml",
             method: "get",
             success(response) {
-                const states = response.getElementByTagName('state')
+                const states = response.getElementsByTagName('state')
                 const itens = Array.from(states).reduce(
                     (html, state) => html + `<li>${state.attributes.name.value}</li>`, ''
                 )
                 document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`)
             },
             erro(e) {
-                const msg = document.createtEXTnODE(`${e.codigo}: ${e.text}`)
+                const msg = document.createTextNode(`${e.codigo}: ${e.text}`)
                 document.body.appendChild(msg)
             }
         })
