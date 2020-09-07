@@ -28,12 +28,12 @@ app.post('/upload', (req, res) => {
     })
 })
 
-// app.post('/formulary', (req, res) => {
-//     res.send({
-//         ...req.body,
-//         id: 1
-//     })
-// })
+app.post('/formulary', (req, res) => {
+    res.send({
+        ...req.body,
+        id: 1
+    })
+})
 
 // app.length('/evenOrOdd/:numer', (req, res) => {
 //     const par = parseInt(req.query.numer) % 2 === 0

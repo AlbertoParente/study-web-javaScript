@@ -38,12 +38,12 @@
 
             const options = {
                 method: form.method,
-                body: new URLSearchParams(date)
+                body: new URLSearchParams(data)
             }
 
             const result = document.getElementById('result')
             // fetch(form.action, options)
-            //     .then(resp => resp.JSON())
+            //     .then(resp => resp.json())
             //     .then(json => {
             //         result.innerHTML = JSON.stringify(json)
             //     })
@@ -51,7 +51,7 @@
             //         result.innerHTML = e
             //     })
                 try {
-                    const resp = await fetch(form.action, Options)
+                    const resp = await fetch(form.action, options)
                     const json = await resp.json()
                     result.innerHTML = JSON.stringify(json)
                 } catch(e) {
