@@ -1,3 +1,4 @@
+const { parallel } = require('gulp')
 const { series } = require('gulp')
 const gulp = require('gulp')
 const sass = require('gulp-sass')
@@ -10,6 +11,11 @@ function tranformationCSS() {
         .pipe(uglifycss({ "uglyComments": true }))
         .pipe(concat('style.min.css'))
         .pipe(gulp.dest('build/css'))
+}
+
+function copyHTML() {
+    return gulp.src('src/index.html')
+        .pipe(gulp.dest('build'))
 }
 
 exports.default = series(tranformationCSS)
