@@ -28,12 +28,12 @@
         function navigateViaAjax(url, selector, push = true) {
             if(!url || !selector) return
             const element = document.querySelector(selector)
-            fecth(url)
+            fetch(url)
                 .then(resp => resp.text())
                 .then(html => {
                     element.innerHTML = html
                     if(push) {
-                        history.pushState({ select }, "Pag Ajax", url)
+                        history.pushState({ selector }, "Pag Ajax", url)
                     }
                 })
         }
@@ -42,7 +42,7 @@
             const url = link.attributes['attr-link'].value
             const selectorDestin = link.attributes['attr-destin'].value
 
-            link.onclik = e => {
+            link.onclick = e => {
                 e.preventDefault()
                 navigateViaAjax(url, selectorDestin)
             }
