@@ -35,12 +35,12 @@ app.post('/formulary', (req, res) => {
     })
 })
 
-// app.length('/evenOrOdd/:numer', (req, res) => {
-//     const par = parseInt(req.query.numer) % 2 === 0
-//     res.send({
-//         result: even ? 'even' : 'odd'
-//     })
-// })
+app.get('/evenOrOdd', (req, res) => {
+    const even = parseInt(req.query.number) % 2 === 0
+    res.send({
+        result: even ? 'even' : 'odd'
+    })
+})
 
 // app.get('/test', (req, res) => res.send('Ok'))
 app.listen(8080, () => console.log('Server is running...'))
