@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const { series } = require('gulp')
+const { series, parallel } = require('gulp')
 
 const firstTask = cb => {
     console.log('Task 1!')
@@ -12,8 +12,8 @@ const secondTask = cb => {
 }
 
 function copy(cb) {
-    // gulp.src(['folder/file1.txt, folder/file2.txt'])
-    gulp.src('folder/**/*.txt')
+    // gulp.src(['folderA/file1.txt', 'folderA/file2.txt'])
+    gulp.src('folderA/**/*.txt')
         // .pipe(halfImage())
         // .pipe(blackAndWhiteImage())
         // .pipe(transformationA())

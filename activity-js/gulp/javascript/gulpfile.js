@@ -5,17 +5,17 @@ const uglify = require('gulp-uglify')
 const babel = require('gulp-babel')
 
 function transformationJs(cb) {
-    gulp.src('src/**/*.js')
+    return gulp.src('src/**/*.js')
         .pipe(babel({
             comments: false,
-            presents: ["env"]
+            presets: ["env"]
         }))
         .pipe(uglify())
         .on('error', err => console.log(err))
         .pipe(concat('codigo.min.js'))
         .pipe(gulp.dest('build'))
 
-    return cb()
+    // return cb()
 }
 
 function end(cb) {
@@ -23,4 +23,4 @@ function end(cb) {
     return cb()
 }
 
-exports.default = series(transformationJs) 
+exports.default = series(transformationJs, end)
