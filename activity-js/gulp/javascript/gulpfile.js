@@ -1,4 +1,4 @@
-const { series } = require('gulp')
+const { series, parallel } = require('gulp')
 const gulp = require('gulp')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
@@ -23,4 +23,5 @@ function end(cb) {
     return cb()
 }
 
+// exports.default = parallel(transformationJs, end)
 exports.default = series(transformationJs, end)
