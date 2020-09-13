@@ -5,5 +5,8 @@
   },
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8"
   }
 }
