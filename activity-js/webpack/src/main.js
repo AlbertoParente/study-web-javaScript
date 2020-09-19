@@ -1,5 +1,5 @@
-// import Person from './person'
-const Person = require('./person')
+// const Person = require('./person')
+import Person from './person'
 
 
 const attendant = new Person

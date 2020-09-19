@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
-  mode: 'production'
+  mode: 'development',
+  entry: './src/main.js'
 }
