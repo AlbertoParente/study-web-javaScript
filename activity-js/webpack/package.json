@@ -1,0 +1,16 @@
+{
+  "name": "webpack-concept",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "keywords": [],
+  "author": "AlbertoParente",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
