@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
@@ -7,11 +8,17 @@ module.exports = {
     filename: "main.js",
     path: __dirname + '/build'
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "style.css"
+    })
+  ],
   module: {
     rules: [{
       test: /\.css$/,
       use: [
-        'style-loader',
+        MiniCssExtractPlugin.loader,
+        //'style-loader',
         'css-loader'
       ]
     }]
