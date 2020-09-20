@@ -1,6 +1,6 @@
 // const Person = require('./person')
 import Person from './person'
-import './assets/css/style.css'
+import './assets'
 
 
 const attendant = new Person
