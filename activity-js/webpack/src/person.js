@@ -1,5 +1,7 @@
+import './modules/moduleA'
+
 export default class Person {
-    greet() {
+    greeting() {
         return 'Good Morning...!'
     }
 }
