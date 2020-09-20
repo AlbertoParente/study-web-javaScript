@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Alberto Parente",
   "license": "ISC",
   "dependencies": {
-    "mssql": "^6.2.0",
-    "tedious": "^8.3.0"
+    "mssql": "^6.2.2",
+    "tedious": "^9.2.1"
   }
 }
