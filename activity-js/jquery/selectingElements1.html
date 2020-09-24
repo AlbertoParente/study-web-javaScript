@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Selecting Elements #01</title>
+    <link rel='stylesheet' href='css/style.css'>
+    <script src='js/jquery.js'></script>
+    <style>
+        .bold {
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class='content activity'>
+    <h1>Selecting Elements #01</h1>
+    <div>
+        <p>Paragraph
+            <span class='bold'>inside span</span>
+        </p>
+    </div>
+    <div>
+        <ul id='market'>
+            <li>Rice</li>
+            <li attr-mandatory>Bean</li>
+            <li class='optional'>Meat</li>
+            <li class='optional'>Egg</li>
+        </ul>
+    </div>
+    <form>
+        <input type='text' name='text'>
+        <input type='password' name='password'>
+        <input type='checkbox' name='check1'>
+        <input type='radio' name='radio1'>
+        <input type='file' name='file'>
+    </form>
+
+    <script>
+        // ...
+    </script>
+</body>
