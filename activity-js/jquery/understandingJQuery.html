@@ -15,5 +15,15 @@
 
     <script>
         $('div').hide(5000).show(5000).fadeOut(5000)
+        console.log($('div').get(1))
+        console.log($.isEmptyObject({ name: null }))
+        console.log(jQuery.inArray(3, [1, 2, 3]))
+
+        $.fn.backgroundGreen = function() {
+            this.css('background-color', 'purple')
+            return this
+        }
+
+        $('body').backgroundGreen().fadeOut(1000)
     </script>
 </body>
