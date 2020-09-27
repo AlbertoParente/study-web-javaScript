@@ -49,6 +49,23 @@
     </form>
 
     <script>
-        // ...
+        $('#market').addClass('highlight').removeClass('highlight')
+        $('li').addClass('highlight')
+        $('[attr-mandatory]').removeClass('highlight')
+        $('li.optional').removeClass('highlight')
+        $('div p span').addClass('highlight')
+
+        $('li:first').css('border', 'solid 3px yellow')
+        $('li:odd').css('border', 'solid 10px orange')
+        $('li:gt(1)').css('border', 'solid 10px white')
+        $('li:not(:last)').css('border', 'none')
+        $('li:contains("a")').css('background-color', 'black')
+
+        $('form *').hide()
+        $('form :text').show()
+        $('form :password').show()
+        $('form :checkbox').show()
+        $('form :radio').show()
+        $('form :file').show()
     </script>
 </body>
