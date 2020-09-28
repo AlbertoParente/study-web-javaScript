@@ -75,12 +75,33 @@
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <span>In span</span>
         </section>
     </main>
     <footer>
         <p>Alberto Parente</p>
     </footer>
     <script>
-        // ...
+        const withBorder = { 'border': 'solid 8px orange' }
+        const withOutBorder = { 'border': 'none' }
+
+        $('a[href="#link3"]').parent().css(withBorder).css(withOutBorder)
+        $('li:last').prev().css(withBorder).css(withOutBorder)
+        $('a[href="#link3"]').parent().next().css(withBorder).css(withOutBorder)
+
+        $('a[href="#link1"]').parents().css(withBorder).css(withOutBorder)
+        $('a[href="#link1"]').parentsUntil($('body')).css(withBorder).css(withOutBorder)
+
+        $('main').children().css(withBorder).css(withOutBorder)
+
+        $('body').find('a').css(withBorder).css(withOutBorder)
+
+        const elementDOM = document.getElementsByClassName('menu')
+        $(elementDOM).css(withBorder)
+
+        $('main').children().each((i, e) => $(e).css(withBorder).css(withOutBorder))
+        $('li').each((i, e) => {
+            $(e).css(withBorder)
+        })
     </script>
 </body>
