@@ -13,13 +13,26 @@
     <div id='content'></div>
 
     <script>
-        const people = [
-            { name: 'Alberto', note: 9.1 },
-            { name: 'Juliana', note: 8.4 },
-            { name: 'Julia', note: 7.6 },
-            { name: 'Pandora', note: 9.7 }
-        ]
+        // $(document).ready(function() {
+        $(function() {
+            const students = [
+                { name: 'Alberto', note: 9.1 },
+                { name: 'Juliana', note: 8.4 },
+                { name: 'Julia', note: 7.6 },
+                { name: 'Pandora', note: 9.7 }
+            ]
         
-        // ...
+            const lines = students.map(student => {
+                const tdName = $('<td>').html(student.name)
+                const tdNote = $('<td>').html(student.note)
+                // return $('<tr>').append(tdName).append(tdNote)
+                // return $('tr').append([ tdName, tdNote ])
+                return $('<tr>').append(tdNote, tdNote)
+            })
+
+            const table = $('<table>').append(lines)
+                .css('border', 'solid 5px')
+            $('#content').append(table)
+    })
     </script>
 </body>
