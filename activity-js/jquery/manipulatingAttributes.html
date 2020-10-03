@@ -23,6 +23,26 @@
     <h1>Manipulating Attributes</h1>
     <div attr-clock='1000'></div>
     <script>
-        // ...
+        function Clock(element) {
+            const rightTime = $('<p>')
+            const minusButton = $('<button>').html('-')
+            const plusButton = $('<button>').html('+')
+
+            const $element = = $(element)
+            $element.append(rightTime, minusButton, plusButton)
+
+            const getActualInterval = () => parseInt($element.attr('attr-clock'))
+
+            let clockTime = null
+            const start = () => {
+                if(clockTime) clearInterval(clockTime)
+                clockTime = setInterval(() => {
+                    rightTime.html(new Date().toLocaleString('pt-BR'))
+                })
+            }
+            const alterInterval = delta
+        }
+
+        $('attr-clock').each(i, e) => new Clock()
     </script>
 </body>
