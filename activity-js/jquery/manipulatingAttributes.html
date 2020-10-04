@@ -50,7 +50,7 @@
             plusButton.click(e => alterInterval(1000))
         }
 
-        $('attr-clock').each(i, e) => new Clock()
+        $('[attr-clock]').each((i, e) => new Clock(e))
         // $('[attr-clock]').attr('hey')
         // $('[attr-clock]').attr('hey', 3)
         $('[attr-clock]').attr({ Hey: 1, neww: true })

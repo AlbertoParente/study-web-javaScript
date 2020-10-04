@@ -15,6 +15,21 @@
     <div id='div3'>3</div>
     <div id='result'></div>
     <script>
-        // ...
+        const font = $('#div1').css('font-family')
+
+        $('#result').append(`Font is ${font}`)
+        $('#div1').css('font-size', '3em')
+        $('#div1').css({ 'font-size': '3.5em', 'color': 'yellow' })
+        $('#div1').css('font-size', function() {
+            return `${2 *2}em`
+        })
+        $('#div2').addClass('highlight')
+
+        const hasClass = $('#div2').hasClass('highlight')
+
+        $('#result').append(`<br>Has class? ${hasClass}`)
+        $('#div2').removeClass('highlight')
+        $('#div2').toggleClass('highlight')
+        $('#div2').toggleClass('highlight')
     </script>
 </body>
