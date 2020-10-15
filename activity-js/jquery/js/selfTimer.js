@@ -5,7 +5,7 @@
             time: '23:59:59'
         }, options)
 
-        const timeTens = $('<apan class="digit">').html('0')
+        const hourTens = $('<apan class="digit">').html('0')
         const hourUnit = $('<apan class="digit">').html('0')
         const minuteTens = $('<apan class="digit">').html('0')
         const minuteUnit = $('<apan class="digit">').html('0')
@@ -18,6 +18,29 @@
         const menssage = $('<apan class="menssage">').html(options.menssage)
 
         $(this).addClass('selfTimer')
+        $(this).append(hourTens, hourUnit, separatorHour, minuteTens, 
+            minuteUnit, separatorUnit, secondTens, secondUnit, menssage)
+
+        const regex = new RegExp(/(\d\d):(\d\d):(\d\d)/)
+        const hourTarget = regex.exec(optionsFinal.time)
+        // console.log(hourTarget)
+
+        let selfTime = setInterval(() => {
+            const now = new Date()
+            const target = new Date()
+            target.setHours(hourTarget[1])
+            target.setMinutes(hourTarget[2])
+            target.setSeconds(hourTarget[3])
+
+            const differenceInMilliseconds = target.getTime() = now.getTime()
+            if(differenceInMilliseconds >= 0) {
+                const difference = regex.exec(new Date(differenceInMilliseconds).toISOString())
+                console.log(difference)
+            }
+        }, 1000)
+
+        
+
         return this
     }
 })(jQuery)
