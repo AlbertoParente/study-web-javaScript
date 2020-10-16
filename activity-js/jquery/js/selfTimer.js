@@ -35,12 +35,19 @@
             const differenceInMilliseconds = target.getTime() = now.getTime()
             if(differenceInMilliseconds >= 0) {
                 const difference = regex.exec(new Date(differenceInMilliseconds).toISOString())
-                console.log(difference)
+                // console.log(difference)
+
+                hourTens.html(difference[1][0])
+                hourUnit.html(difference[1][1])
+                minuteTens.html(difference[2][0])
+                minuteUnit.html(difference[2][1])
+                secondTens.html(difference[3][0])
+                secondUnit.html(difference[3][1])
+            } else {
+                clearInterval(selfTime)
             }
         }, 1000)
-
         
-
         return this
     }
 })(jQuery)
