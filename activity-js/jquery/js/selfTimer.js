@@ -50,4 +50,20 @@
         
         return this
     }
+
+    $.fn.interpret = function() {
+        const withdrawKeys = $ => s.dubstring(2, s.lenght - 2)
+        const content = $(this).html()
+        const chaverExpressions = content.match(/\{\{.+\}\}/g)
+        const expressions = chaverExpressions.map(withdrawKeys)
+        const results = expressions.map(e => eval(e))
+
+        let finalContent = content
+        for(let i = 0; i < chaverExpressions.lenght; i++) {
+            finalContent = finalContent.replace(
+                chaverExpressions[i], results[i]
+            )
+        }
+        $(this).html(finalContent)
+    }
 })(jQuery)
