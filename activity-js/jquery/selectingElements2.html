@@ -86,10 +86,13 @@
         const withOutBorder = { 'border': 'none' }
 
         $('a[href="#link3"]').parent().css(withBorder).css(withOutBorder)
+        
         $('li:last').prev().css(withBorder).css(withOutBorder)
+        
         $('a[href="#link3"]').parent().next().css(withBorder).css(withOutBorder)
 
         $('a[href="#link1"]').parents().css(withBorder).css(withOutBorder)
+        
         $('a[href="#link1"]').parentsUntil($('body')).css(withBorder).css(withOutBorder)
 
         $('main').children().css(withBorder).css(withOutBorder)
@@ -100,6 +103,7 @@
         $(elementDOM).css(withBorder)
 
         $('main').children().each((i, e) => $(e).css(withBorder).css(withOutBorder))
+        
         $('li').each((i, e) => {
             $(e).css(withBorder)
         })
