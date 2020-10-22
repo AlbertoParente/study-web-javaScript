@@ -29,7 +29,7 @@
             const minusButton = $('<button>').html('-')
             const plusButton = $('<button>').html('+')
 
-            const $element = = $(element)
+            const $element = $(element)
             $element.append(rightTime, minusButton, plusButton)
 
             const getActualInterval = () => parseInt($element.attr('attr-clock'))
@@ -41,19 +41,22 @@
                     rightTime.html(new Date().toLocaleString('pt-BR'))
                 }, getActualInterval())
             }
+
             const alterInterval = delta => {
                 const neww = Math.max(getActualInterval() + delta, 1000)
                 $element.attr('attr-clock', neww)
                 start()
             }
+
             minusButton.click(e => alterInterval(1000))
-            plusButton.click(e => alterInterval(1000))
+            plusButton.click(e => alterInterval(-1000))
+            start()
         }
 
         $('[attr-clock]').each((i, e) => new Clock(e))
         // $('[attr-clock]').attr('hey')
         // $('[attr-clock]').attr('hey', 3)
-        $('[attr-clock]').attr({ Hey: 1, neww: true })
-        $('[attr-clock]').removeAttr('hey').removeAttr('neww')
+        $('[attr-clock]').attr({ Hey: 1, new: true })
+        $('[attr-clock]').removeAttr('Hey').removeAttr('new')
     </script>
 </body>
