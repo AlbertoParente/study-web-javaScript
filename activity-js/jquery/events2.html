@@ -22,16 +22,17 @@
     <div id="result2">?</div>
     <script>
         const alternatelight = () => $('#div1').toggleClass('highlight')
-        // $('#div1').on('mouseenter mouseleave', alternateHighlight)
+        // $('#div1').on('mouseenter mouseleave', alternatelight)
         $('#div1').hover(alternatelight, alternatelight)
 
         $('#div1').one('mouseenter', e => alert('Important Notice: Thank you !!!'))
+        
         $('#div1').dblclick(e => $('#div1').fadeOut(1000).fadeIn(1000))
 
         $(window).resize(function(e) {
             const l = $(window).width()
             const a = $(window).height()
-            $('result1').html(`Width: ${l} and Height: ${a}`)
+            $('#result1').html(`Width: ${l} and Height: ${a}`)
         })
 
         $(':input').select(e => {
