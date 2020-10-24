@@ -21,7 +21,7 @@
 <body class='content activity'>
     <h1>Events #03</h1>
     <div id='div1'>1</div>
-    <div id='div2'>1</div>
+    <div id='div2'>2</div>
     <input id='input1' type='text' placeholder='Type Something!'>
     <span id='result'></span>
 
@@ -39,39 +39,18 @@
 
             div1.append(`<br>type: ${e.type}`)
             div1.append(`<br>which: ${e.which}`)
-            div1.append(`<br>metaKey: ${metaKey}`)
+            div1.append(`<br>metaKey: ${e.metaKey}`)
 
             div2.append(`pageX: ${e.pageX}`)
             div2.append(`<br>pageY: ${e.pageY}`)
             div2.append(`<br>clientX: ${e.clientX}`)
             div2.append(`<br>clientY: ${e.clientY}`)
 
-            const obs = e.data ? e.data.obs: null
+            const obs = e.data ? e.data.obs : null
             div2.append(`<br>obs: ${obs}`)            
         }
 
         $('#div1, #div2').on('mouseenter mouseleave', { obs: 'Succeed!!!' }, showEventData)
         $('input').keyup(showEventData)
-
-
-        const alternatelight = () => $('#div1').toggleClass('highlight')
-        // $('#div1').on('mouseenter mouseleave', alternatelight)
-        $('#div1').hover(alternatelight, alternatelight)
-
-        $('#div1').one('mouseenter', e => alert('Important Notice: Thank you !!!'))
-        
-        $('#div1').dblclick(e => $('#div1').fadeOut(1000).fadeIn(1000))
-
-        $(window).resize(function(e) {
-            const l = $(window).width()
-            const a = $(window).height()
-            $('#result1').html(`Width: ${l} and Height: ${a}`)
-        })
-
-        $(':input').select(e => {
-            const start = e.target.selectionStart
-            const end = e.target.selectionEnd
-            $('#result2').html(e.target.value.substring(start, end))
-        })
     </script>
 </body>
