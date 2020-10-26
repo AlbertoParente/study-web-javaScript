@@ -22,11 +22,11 @@
     </div>
 
     <script>
-        const $ = { name: 'Not is jQuery' }
+        // const $ = { name: 'Not is jQuery' }
 
         (function ($) {
             $.fn.interpret = function() {
-                const withdrawKeys = $ => s.dubstring(2, s.lenght - 2)
+                const withdrawKeys = s => s.substring(2, s.lenght - 2)
                 const content = $(this).html()
                 const chaverExpressions = content.match(/\{\{.+\}\}/g)
                 const expressions = chaverExpressions.map(withdrawKeys)
@@ -41,5 +41,7 @@
                 $(this).html(finalContent)
             }
         })(jQuery)
+
+        $('div').interpret()
     </script>
 </body>

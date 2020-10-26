@@ -33,13 +33,13 @@
         }
 
         function moveDiagonal(value, duration, callback) {
-            $('div').animate({ top: `+=${value}` }, duration, callback)
+            $('div').animate({ top: `+=${value}` , left: `+=${value}` }, duration, callback)
         }
 
-        function(value, duration, callback) {
+        function rotate(value, duration, callback) {
             $('div').animate({ transform: `+=${value}` }, {
                 step: function(value) {
-                    $(this).css('tranform', `rotate(${value},deg)`)
+                    $(this).css('transform', `rotate(${value}deg)`)
                 },
                 duration: duration
             }, 'linear', callback)
