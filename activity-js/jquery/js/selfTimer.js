@@ -1,38 +1,38 @@
 (function ($) {
-    $.fn.selfTime = function(options) {
+    $.fn.selfTimer = function(options) {
         const optionsFinal = $.extend({
             message: 'Coming soon!!!',
             time: '23:59:59'
         }, options)
 
-        const hourTens = $('<apan class="digit">').html('0')
-        const hourUnit = $('<apan class="digit">').html('0')
-        const minuteTens = $('<apan class="digit">').html('0')
-        const minuteUnit = $('<apan class="digit">').html('0')
-        const secondTens = $('<apan class="digit">').html('0')
-        const secondUnit = $('<apan class="digit">').html('0')
+        const hourTens = $('<span class="digit">').html('0')
+        const hourUnit = $('<span class="digit">').html('0')
+        const minuteTens = $('<span class="digit">').html('0')
+        const minuteUnit = $('<span class="digit">').html('0')
+        const secondTens = $('<span class="digit">').html('0')
+        const secondUnit = $('<span class="digit">').html('0')
 
-        const separatorHour = $('<apan class="separator">').html(':')
-        const separatorUnit = $('<apan class="digit">').html(':')
+        const separatorHour = $('<span class="separator">').html(':')
+        const separatorMinute = $('<span class="separator">').html(':')
 
-        const menssage = $('<apan class="menssage">').html(options.menssage)
+        const message = $('<span class="message">').html(optionsFinal.message)
 
         $(this).addClass('selfTimer')
         $(this).append(hourTens, hourUnit, separatorHour, minuteTens, 
-            minuteUnit, separatorUnit, secondTens, secondUnit, menssage)
+            minuteUnit, separatorMinute, secondTens, secondUnit, message)
 
         const regex = new RegExp(/(\d\d):(\d\d):(\d\d)/)
         const hourTarget = regex.exec(optionsFinal.time)
-        // console.log(hourTarget)
+        console.log(hourTarget)
 
-        let selfTime = setInterval(() => {
+        let selfTimer = setInterval(() => {
             const now = new Date()
             const target = new Date()
             target.setHours(hourTarget[1])
             target.setMinutes(hourTarget[2])
             target.setSeconds(hourTarget[3])
 
-            const differenceInMilliseconds = target.getTime() = now.getTime()
+            const differenceInMilliseconds = target.getTime() - now.getTime()
             if(differenceInMilliseconds >= 0) {
                 const difference = regex.exec(new Date(differenceInMilliseconds).toISOString())
                 // console.log(difference)
@@ -44,26 +44,10 @@
                 secondTens.html(difference[3][0])
                 secondUnit.html(difference[3][1])
             } else {
-                clearInterval(selfTime)
+                clearInterval(selfTimer)
             }
         }, 1000)
         
         return this
-    }
-
-    $.fn.interpret = function() {
-        const withdrawKeys = $ => s.dubstring(2, s.lenght - 2)
-        const content = $(this).html()
-        const chaverExpressions = content.match(/\{\{.+\}\}/g)
-        const expressions = chaverExpressions.map(withdrawKeys)
-        const results = expressions.map(e => eval(e))
-
-        let finalContent = content
-        for(let i = 0; i < chaverExpressions.lenght; i++) {
-            finalContent = finalContent.replace(
-                chaverExpressions[i], results[i]
-            )
-        }
-        $(this).html(finalContent)
     }
 })(jQuery)
