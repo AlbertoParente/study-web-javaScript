@@ -23,7 +23,7 @@
 
         const regex = new RegExp(/(\d\d):(\d\d):(\d\d)/)
         const hourTarget = regex.exec(optionsFinal.time)
-        console.log(hourTarget)
+        // console.log(hourTarget)
 
         let selfTimer = setInterval(() => {
             const now = new Date()
