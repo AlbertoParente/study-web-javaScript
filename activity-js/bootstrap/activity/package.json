@@ -1,5 +1,5 @@
 {
-  "name": "exercicios",
+  "name": "activity",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "bootstrap": "4.1.1",
-    "http-server": "0.11.1"
+    "bootstrap": "^4.5.2",
+    "http-server": "^0.12.3",
+    "jquery": "3.5.1",
+    "popper.js": "^1.16.1"
   }
 }

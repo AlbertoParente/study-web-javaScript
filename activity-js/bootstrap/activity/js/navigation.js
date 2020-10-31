@@ -15,7 +15,7 @@
             })
     }
 
-    function configurarLinks() {
+    function configureLinks() {
         document.querySelectorAll('[attr-link]')
             .forEach(link => {
                 link.href = link.attributes['attr-link'].value
