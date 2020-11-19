@@ -3,7 +3,7 @@
         if (!hash) return
 
         const link = document.querySelector(`[attr-link='${hash}']`)
-        if(!link) return
+        if (!link) return
 
         const destin = document.querySelector('[attr-link-destin]')
 
@@ -33,7 +33,7 @@
     }
 
     window.onhashchange = e => navigateViaAjax(location.hash)
-    
+
     configureLinks()
     initialNavigation()
 })()
