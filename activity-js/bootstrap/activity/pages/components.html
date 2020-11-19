@@ -149,6 +149,15 @@
 <hr>
 
 <!-- Tooltip -->
+<div>
+    <div class="alert alert-warning">
+        JS function call required!!!
+    </div>
+
+    <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Think before ???">
+        Excluir !
+    </button>
+</div>
 
 <h1 class="mt-5">6. Slider -
     <small>
@@ -169,5 +178,5 @@
 <!-- Accordion -->
 
 <script>
-    // ...
+    $('[data-toggle="tooltip"]').tooltip()
 </script>

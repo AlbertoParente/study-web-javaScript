@@ -12,6 +12,7 @@
             .then(resp => resp.text())
             .then(html => {
                 destin.innerHTML = html
+                eval(html.match(/\<script\>([\s\S]*)\<\/script\>/)[1])
             })
     }
 
