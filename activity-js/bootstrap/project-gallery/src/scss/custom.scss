@@ -1,3 +1,12 @@
+.jumbotron {
+    background-color: #fff;
+    margin: 0;
+}
+
+.jumbotron .jumbotron-heading {
+    font-weight: 300;
+}
+
 @import "~bootstrap/scss/bootstrap";
 
 $fa-font-path: "~font-awesome/fonts";
