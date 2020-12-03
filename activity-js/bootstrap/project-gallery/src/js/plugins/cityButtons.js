@@ -11,7 +11,7 @@ function filterByCity(city) {
     })
 }
 
-const cityButtons = $('[attr-city-buttons]')
+$.fn.cityButtons = function() {
 const cities = new Set 
 $('[attr-city]').each(function(i, e) {
     cities.add($(e).attr('attr-city'))
@@ -29,25 +29,8 @@ btns.push(btnAll)
 const btnGroup = $('<div>').addClass(['btn-group'])
 btnGroup.append(btns)
 
-cityButtons.html(btnGroup)
-
-
-import $ from 'jquery'
-
-function loadIncludes(parent) {
-    if(!parent) parent = 'body'
-    $(parent).find('[attr-include]').each(function(i, e) {
-        const url = $(e).attr('attr-include')
-        $.ajax({
-            url,
-            success(data) {
-                $(e).html(data)
-                $(e).removeAttr('attr-include')
-
-                loadIncludes(e)
-            }
-        })
-    })
+$(this).html(btnGroup)
+return this
 }
 
-loadIncludes()
+$('[attr-city-buttons]').cityButtons()
