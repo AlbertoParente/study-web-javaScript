@@ -7,9 +7,8 @@
     font-weight: 300;
 }
 
-@import "~bootstrap/scss/bootstrap";
-
-$fa-font-path: "~font-awesome/fonts";
-@import "~font-awesome/scss/font-awesome";
-
-@import "custom";
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    
+}
