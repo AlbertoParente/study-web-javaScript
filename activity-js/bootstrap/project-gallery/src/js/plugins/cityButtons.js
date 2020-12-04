@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import { onloadHTMLSuccess } from '../core/includes'
 
 const duration = 600
 
@@ -32,5 +33,9 @@ btnGroup.append(btns)
 $(this).html(btnGroup)
 return this
 }
+
+onloadHTMLSuccess(function() {
+    $('[attr-city-buttons]').cityButtons()
+})
 
 $('[attr-city-buttons]').cityButtons()
