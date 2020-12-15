@@ -8,7 +8,6 @@ function filterByCity(city) {
         const isTarget = $(this).attr('attr-city') === city || city === null
         if(isTarget) $(this).fadeIn(duration)
         else $(this).fadeOut(duration)
-        
     })
 }
 

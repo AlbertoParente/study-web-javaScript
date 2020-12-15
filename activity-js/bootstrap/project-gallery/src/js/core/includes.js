@@ -17,7 +17,6 @@ function loadIncludes(parent) {
             success(data) {
                 $(e).html(data)
                 $(e).removeAttr('attr-include')
-
                 loadIncludes(e)
             }
         })
