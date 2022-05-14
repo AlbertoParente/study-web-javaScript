@@ -5,7 +5,7 @@ const product = [
     { name: 'Plastic Cup', price: 18.99, fragile: false }
 ]
 
-console.log(product.filter(function(p){
+console.log(product.filter(function (p) {
     return false
 }))
 

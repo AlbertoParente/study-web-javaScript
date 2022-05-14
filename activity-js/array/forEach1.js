@@ -1,10 +1,10 @@
-const approveds = [ 'Juliana', 'Alberto', 'Julia', 'Graziella' ]
+const approveds = ['Juliana', 'Alberto', 'Julia', 'Graziella']
 
-approveds.forEach(function(name, index) {
+approveds.forEach(function (name, index) {
     console.log(`${index + 1}) ${name}`)
 })
 
-approveds.forEach(function(name, index, array) {
+approveds.forEach(function (name, index, array) {
     console.log(`${index + 1}) ${name}`)
     console.log(array)
 })

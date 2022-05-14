@@ -3,7 +3,7 @@ function Person(firstName, lastName) {
     this.lastName = lastName
 }
 
-var me = new Person('John', 'Smith','Alberto')
+var me = new Person('John', 'Smith', 'Alberto')
 
 console.table(me)
 

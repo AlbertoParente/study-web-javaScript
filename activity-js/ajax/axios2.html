@@ -18,7 +18,7 @@
             const text = JSON.stringify(dados)
             document.getElementById(id).innerHTML = text
         }
-        
+
         // axios('evenOrOdd?number=7').then(resp => showResult('get', resp.data))
 
         axios.get('evenOrOdd', {
@@ -26,7 +26,7 @@
                 number: 6
             }
         }).then(resp => showResult('get', resp.data))
-        
+
         // axios.post('formulary', {
         //     name: 'Alberto',
         //     surname: 'Parente'
