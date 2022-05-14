@@ -1,5 +1,5 @@
 function onlyGoodNews(note) {
-    if(note >= 7) {
+    if (note >= 7) {
         console.log('Approved with' + note)
     }
 }
@@ -8,7 +8,7 @@ onlyGoodNews(8.1)
 onlyGoodNews(6.1)
 
 function ifItIsTrue(value) {
-    if(value) {
+    if (value) {
         console.log('Is True...' + value)
     }
 }

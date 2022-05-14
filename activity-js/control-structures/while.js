@@ -5,7 +5,7 @@ function getRandomIntegerBetween(min, max) {
 
 let option = 0
 
-while(option != -1) {
+while (option != -1) {
     option = getRandomIntegerBetween(-1, 10)
     console.log(`Chosen option was ${option}.`)
 }

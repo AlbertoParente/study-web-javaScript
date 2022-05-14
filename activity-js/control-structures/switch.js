@@ -1,5 +1,5 @@
-const printResult = function(note) {
-    switch(Math.floor(note)) {
+const printResult = function (note) {
+    switch (Math.floor(note)) {
         case 10:
         case 9:
             console.log('Honor board!')

@@ -1,5 +1,5 @@
-const printResult = function(note) {
-    if(note >= 7) {
+const printResult = function (note) {
+    if (note >= 7) {
         console.log('Approved!')
     } else {
         console.log('Reproved!')
