@@ -32,19 +32,20 @@
             min-height: 100vh;
             grid-template-columns: 300px 1fr;
             grid-template-rows: 100px 1fr 100px;
-            grid-template-areas: 'header_ header_' 'navegation_ content_' 'footer_ footer_';
+            grid-template-areas: 'header_ header_''navegation_ content_''footer_ footer_';
         }
 
         @media(max-width: 700px) {
             body {
                 grid-template-columns: 1fr;
                 grid-template-rows: 80px 1fr 100px;
-                grid-template-areas: 'navegation_' 'content_'  'footer_';
+                grid-template-areas: 'navegation_''content_''footer_';
             }
 
-            header { display: none; }
+            header {
+                display: none;
+            }
         }
-
     </style>
 </head>
 

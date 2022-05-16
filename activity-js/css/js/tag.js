@@ -22,7 +22,7 @@ document.querySelectorAll('.tag').forEach(element => {
 
     element.style.borderColor = colors.get(tagName)
 
-    if(!element.classList.contains('nolabel')) {
+    if (!element.classList.contains('nolabel')) {
         const label = document.createElement('label')
         label.style.backgroundColor = colors.get(tagName)
         label.innerHTML = tagName
