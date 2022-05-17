@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Selecting Elements #02</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="content activity">
     <div id="first">#first</div>
     <div>Second</div>
     <div class="third last"><span attrib>.third .last</span></div>
-    <script>              
+    <script>
         document.querySelector('#first').classList.add('highlight')
 
-        const selecting = seletor => 
+        const selecting = seletor =>
             document.querySelectorAll(seletor).forEach(e => e.classList.add('highlight'))
         const deselect = seletor =>
             document.querySelectorAll(seletor).forEach(e => e.classList.remove('highlight'))
@@ -33,7 +35,8 @@
 
         deselect('*')
         selecting('[attrib]')
-        
+
     </script>
 </body>
+
 </html>

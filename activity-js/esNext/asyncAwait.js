@@ -5,15 +5,15 @@ const getGroup = letter => {
     return new Promise((resolve, reject) => {
         http.get(url, res => {
             let result = ''
-    
+
             res.on('data', dados => {
                 result += dados
             })
-    
+
             res.on('end', () => {
                 try {
                     resolve(JSON.parse(result))
-                } catch(e) {
+                } catch (e) {
                     reject(e)
                 }
             })

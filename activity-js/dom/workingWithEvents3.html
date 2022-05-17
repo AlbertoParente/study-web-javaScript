@@ -10,19 +10,19 @@
             margin: 0;
             display: flex;
         }
-        
+
         .left {
             height: 100vh;
             width: 50%;
             background-color: coral;
         }
-        
+
         .right {
             height: 100vh;
             width: 50%;
             background-color: cornflowerblue;
         }
-        
+
         .item {
             border: solid 5px black;
             background-color: darkgrey;
@@ -49,14 +49,14 @@
         items.forEach((item, index) => {
             item.draggable = true
             item.id = item.id || `draggable-item-${index}`
-            item.ondragstart = e => 
+            item.ondragstart = e =>
                 e.dataTransfer.setData('item-id', e.target.id)
         })
 
         const dropzones = document.querySelectorAll('[attr-dropzone]')
         dropzones.forEach(dropzone => {
             dropzone.ondragover = e => e.preventDefault()
-            dropzone.ondrop = function(e) {
+            dropzone.ondrop = function (e) {
                 const id = e.dataTransfer.getData('item-id')
                 const item = document.getElementById(id)
                 // e.target.appendChild(item)
