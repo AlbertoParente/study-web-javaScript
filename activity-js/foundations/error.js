@@ -1,8 +1,8 @@
-function handleErrorAndLaunch(error){
-   // throw new Error('Test...')
-   // throw 10
-   // throw true
-   // throw 'Message'
+function handleErrorAndLaunch(error) {
+    // throw new Error('Test...')
+    // throw 10
+    // throw true
+    // throw 'Message'
     throw {
         name: error.name = 'Error',
         msg: error.message = 'Test',
@@ -13,7 +13,7 @@ function handleErrorAndLaunch(error){
 function printNameUppercase(obj) {
     try {
         console.log(obj.name.toUppercase() + '!!!')
-    } catch(e) {
+    } catch (e) {
         handleErrorAndLaunch(e)
     } finally {
         console.log('Final')

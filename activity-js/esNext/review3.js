@@ -14,7 +14,7 @@ const person = {
 console.log(person.name, person.hello())
 
 // Class
-class Animal {}
+class Animal { }
 class Dog extends Animal {
     speak() {
         return 'Au Au!'

@@ -6,7 +6,7 @@ value[4] = 10
 console.log(value)
 console.log(value.length) // Array size
 
-value.push({id:3}, false, null, 'teste') // Include new element
+value.push({ id: 3 }, false, null, 'teste') // Include new element
 console.log(value)
 
 console.log(value.pop()) // Remove last element
@@ -19,4 +19,3 @@ value[10] = 13
 console.log(value)
 
 console.log(typeof value)
-

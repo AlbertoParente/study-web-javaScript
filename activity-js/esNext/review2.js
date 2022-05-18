@@ -21,4 +21,4 @@ function total(...numbers) {
     numbers.forEach(element => total += element)
     return total
 }
-console.log(total(2 , 3, 4, 5))
+console.log(total(2, 3, 4, 5))

@@ -9,9 +9,9 @@ object1.name = 'Boll 1'
 
 console.log(object1.name)
 
-function object (name) {
+function object(name) {
     this.name = name
-    this.exec = function() {
+    this.exec = function () {
         console.log('Exec...')
     }
 }

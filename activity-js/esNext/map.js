@@ -6,7 +6,7 @@ console.log(technologies.react) // No
 console.log(technologies.get('react').framework)
 
 const brokenKeys = new Map([
-    [function() { }, 'Função'],
+    [function () { }, 'Função'],
     [{}, 'Object'],
     [123, 'Number']
 ])

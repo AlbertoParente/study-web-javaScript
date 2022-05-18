@@ -10,7 +10,7 @@ console.log(a)
 const product = 'ipad'
 console.log(`${product} is expensive...!`)
 
-// Destructuring 
+// Destructuring
 const [l, e, ...tras] = "Alberto"
 console.log(l, e, tras)
 

@@ -2,7 +2,7 @@ function speakAfter(seconds, phrase) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(phrase)
-        },seconds * 1000) 
+        }, seconds * 1000)
     })
 }
 
