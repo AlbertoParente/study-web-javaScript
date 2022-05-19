@@ -1,4 +1,4 @@
-let compareWithThis = function(param) {
+let compareWithThis = function (param) {
     console.log(this === param)
 }
 

@@ -1,4 +1,4 @@
-const greeting = 'Hello' 
+const greeting = 'Hello'
 
 function exec() {
     const greeting = 'hello...'

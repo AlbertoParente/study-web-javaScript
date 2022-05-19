@@ -1,7 +1,7 @@
 function Person(name) {
-        this.name = name
+    this.name = name
 
-    this.speak = function() {
+    this.speak = function () {
         console.log(`My name is ${this.name}`);
     }
 }

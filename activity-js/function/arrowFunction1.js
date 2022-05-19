@@ -1,4 +1,4 @@
-let doubleFunc = function(a) {
+let doubleFunc = function (a) {
     return 2 * a
 }
 
@@ -9,7 +9,7 @@ doubleFunc = (a) => {
 doubleFunc = a => 2 * a // Return implicit
 console.log(doubleFunc(Math.PI))
 
-let hello = function() {
+let hello = function () {
     return 'Hello...!'
 }
 

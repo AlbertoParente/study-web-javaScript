@@ -1,15 +1,15 @@
 function Car(maximumSpeed = 200, delta = 5) {
     let maximumSpeed = 0
 
-    this.sppedUp = function() {
-        if(currentSpeed + delta <= maximumSpeed) {
+    this.sppedUp = function () {
+        if (currentSpeed + delta <= maximumSpeed) {
             currentSpeed += delta
         } else {
             currentSpeed = maximumSpeed
         }
     }
 
-    this.getCurrentSpeed = function() {
+    this.getCurrentSpeed = function () {
         return currentSpeed
     }
 }
