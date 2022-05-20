@@ -6,8 +6,6 @@ const sass = require('gulp-sass')
 const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
 
-
-
 function appHTML() {
     return gulp.src('src/**/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
@@ -32,7 +30,7 @@ function appJS() {
 
 function appIMG() {
     return gulp.src('src/assets/imgs/**/*.*')
-    .pipe(gulp.dest('build/assets/imgs'))
+        .pipe(gulp.dest('build/assets/imgs'))
 }
 
 gulp.task('appHTML', appHTML)

@@ -14,7 +14,7 @@ body {
     display: grid;
     grid-template-columns: $width-barra-lateral 1fr;
     grid-template-rows: $height-header 1fr $height-footer;
-    grid-template-areas: 
+    grid-template-areas:
         "logo header"
         "menu content"
         "menu footer";
@@ -46,7 +46,7 @@ footer.footer {
     body {
         grid-template-rows: $height-header $height-menu-top 1fr $height-footer;
         grid-template-columns: $width-barra-lateral 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "logo header"
             "menu menu"
             "content content"
@@ -58,7 +58,7 @@ footer.footer {
     body {
         grid-template-rows: $height-logo $height-header $height-menu-top 1fr $height-footer;
         grid-template-columns: 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "logo"
             "header"
             "menu"

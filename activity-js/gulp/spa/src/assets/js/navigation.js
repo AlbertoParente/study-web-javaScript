@@ -39,7 +39,7 @@
     }
 
     window.onhashchange = e => navigateViaAjax(location.hash)
-    
+
     configureLinks()
     navigationInitial()
 })()

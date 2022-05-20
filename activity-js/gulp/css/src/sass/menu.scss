@@ -8,7 +8,7 @@ aside.menu a {
     text-decoration: none;
     color: #FFF;
     margin: 10px 0px;
-    padding: 5px; 
+    padding: 5px;
     font-size: $size-medium;
 }
 
@@ -22,6 +22,7 @@ aside.menu a:hover {
         justify-content: flex-start;
         align-items: center;
     }
+
     aside.menu a {
         display: inline;
         padding: 10px;

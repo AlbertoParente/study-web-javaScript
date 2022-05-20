@@ -1,9 +1,31 @@
-.red { color: $color-red-1; }
-.white { color: $color-white; }
-.bg-red { background-color: $color-red-1; }
-.bg-blue { background-color: $color-blue-1; }
+.red {
+    color: $color-red-1;
+}
 
-.gd-green-blue { background: $gradiente-1; }
-.gd-grey { background: $gradiente-2; }
-.gd-orange { background: $gradiente-3; }
-.gd-blue {background: $gradiente-4; }
+.white {
+    color: $color-white;
+}
+
+.bg-red {
+    background-color: $color-red-1;
+}
+
+.bg-blue {
+    background-color: $color-blue-1;
+}
+
+.gd-green-blue {
+    background: $gradiente-1;
+}
+
+.gd-grey {
+    background: $gradiente-2;
+}
+
+.gd-orange {
+    background: $gradiente-3;
+}
+
+.gd-blue {
+    background: $gradiente-4;
+}

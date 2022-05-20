@@ -13,7 +13,8 @@ aside.menu-area {
     padding: 15px;
 }
 
-.menu a:hover, .menu .selected {
+.menu a:hover,
+.menu .selected {
     background: $gradiente-1;
 }
 
@@ -27,7 +28,7 @@ aside.menu-area {
         justify-content: flex-start;
         align-items: center;
     }
-    
+
     .menu a {
         display: inline;
         padding: 10px;
