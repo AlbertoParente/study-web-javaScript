@@ -64,19 +64,19 @@
 <script>
     function moving(elem, start, end, step, callback) {
         const newStart = start - step
-        if(newStart >= end) {
+        if (newStart >= end) {
             elem.style.left = newStart + 'px'
             setTimeout(() => moving(elem, newStart, end, step, callback), 7)
         } else {
             callback()
         }
     }
-/*
-    const p = document.querySelector('[attrib-slider] > p')
-    p.style.display = 'block'
-    moving(p, 1500, -520, 5, () => {
-        console.log('Finished...!')
-    }) */
+    /*
+        const p = document.querySelector('[attrib-slider] > p')
+        p.style.display = 'block'
+        moving(p, 1500, -520, 5, () => {
+            console.log('Finished...!')
+        }) */
 
     function slider() {
         const elements = document.querySelectorAll('[attrib-slider] > p')

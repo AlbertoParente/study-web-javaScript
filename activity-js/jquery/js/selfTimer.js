@@ -1,5 +1,5 @@
 (function ($) {
-    $.fn.selfTimer = function(options) {
+    $.fn.selfTimer = function (options) {
         const optionsFinal = $.extend({
             message: 'Coming soon!!!',
             time: '23:59:59'
@@ -18,7 +18,7 @@
         const message = $('<span class="message">').html(optionsFinal.message)
 
         $(this).addClass('selfTimer')
-        $(this).append(hourTens, hourUnit, separatorHour, minuteTens, 
+        $(this).append(hourTens, hourUnit, separatorHour, minuteTens,
             minuteUnit, separatorMinute, secondTens, secondUnit, message)
 
         const regex = new RegExp(/(\d\d):(\d\d):(\d\d)/)
@@ -33,7 +33,7 @@
             target.setSeconds(hourTarget[3])
 
             const differenceInMilliseconds = target.getTime() - now.getTime()
-            if(differenceInMilliseconds >= 0) {
+            if (differenceInMilliseconds >= 0) {
                 const difference = regex.exec(new Date(differenceInMilliseconds).toISOString())
                 // console.log(difference)
 
@@ -47,7 +47,7 @@
                 clearInterval(selfTimer)
             }
         }, 1000)
-        
+
         return this
     }
 })(jQuery)

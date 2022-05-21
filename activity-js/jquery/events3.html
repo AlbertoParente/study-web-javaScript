@@ -47,7 +47,7 @@
             div2.append(`<br>clientY: ${e.clientY}`)
 
             const obs = e.data ? e.data.obs : null
-            div2.append(`<br>obs: ${obs}`)            
+            div2.append(`<br>obs: ${obs}`)
         }
 
         $('#div1, #div2').on('mouseenter mouseleave', { obs: 'Succeed!!!' }, showEventData)

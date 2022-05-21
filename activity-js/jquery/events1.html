@@ -33,16 +33,16 @@
         $('#position').mouseleave(e => {
             $('body').mousemove(showsMousePosition)
         })
-        
+
         let Clicks = 0
         $('body').click(e => {
             $('#Clicks').html(`Clicks: ${++Clicks}`)
         })
 
         const BackgroundOriginal = $('body').css('background-color')
-        $('input').keyup(function(e) {
+        $('input').keyup(function (e) {
             const value = $(this).val()
-            if(value.match(/#[\da-fA-F]{3,6}/)) {
+            if (value.match(/#[\da-fA-F]{3,6}/)) {
                 $('body').css('background-color', value)
             } else {
                 $('body').css('background-color', BackgroundOriginal)

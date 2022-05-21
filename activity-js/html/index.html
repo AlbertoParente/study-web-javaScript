@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Activity HTML</h1>
@@ -36,7 +38,7 @@
         document.querySelectorAll('[attrib-nav]').forEach(link => {
             const content = document.getElementById('content')
 
-            link.onclick = function(e) {
+            link.onclick = function (e) {
                 e.preventDefault()
                 fetch(link.getAttribute('attrib-nav'))
                     .then(resp => resp.text())
@@ -45,4 +47,5 @@
         })
     </script>
 </body>
+
 </html>

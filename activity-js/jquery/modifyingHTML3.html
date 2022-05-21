@@ -14,7 +14,7 @@
 
     <script>
         // $(document).ready(function() {
-        $(function() {
+        $(function () {
             const students = [
                 { name: 'Alberto', note: 10.00 },
                 { name: 'Juliana', note: 8.4 },
@@ -24,18 +24,18 @@
                 { name: 'Gaby', note: 9.8 },
                 { name: 'Pedrinho', note: 10.00 }
             ]
-        
+
             const lines = students.map(student => {
                 const tdName = $('<td>').html(student.name)
                 const tdNote = $('<td>').html(student.note)
                 // return $('<tr>').append(tdName).append(tdNote)
                 // return $('<tr>').append(tdName, tdNote)
-                return $('<tr>').append([ tdName, tdNote ])
+                return $('<tr>').append([tdName, tdNote])
             })
 
             const table = $('<table>').append(lines)
                 .css('border', 'solid 5px')
             $('#content').append(table)
-    })
+        })
     </script>
 </body>

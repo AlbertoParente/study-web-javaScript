@@ -36,7 +36,7 @@
 
             let clockTime = null
             const start = () => {
-                if(clockTime) clearInterval(clockTime)
+                if (clockTime) clearInterval(clockTime)
                 clockTime = setInterval(() => {
                     rightTime.html(new Date().toLocaleString('pt-BR'))
                 }, getActualInterval())
