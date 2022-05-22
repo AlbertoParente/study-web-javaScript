@@ -39,4 +39,4 @@ app.delete('/products/:id', (req, res, next) => {
 
 app.listen(port, () => {
     console.log(`Server running in port: ${port}.`)
-}) 
+})

@@ -1,1 +1,5 @@
-{"name":"Notebook","price":2500,"descont":0.15}
+{
+    "name": "Notebook",
+    "price": 2500,
+    "descont": 0.15
+}

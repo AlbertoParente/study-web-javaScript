@@ -13,7 +13,7 @@ const step3 = ctx => ctx.value3 = 'mid3'
 
 const exec = (ctx, ...middlewares) => {
     const execStep = index => {
-        middlewares && index < middlewares.length && 
+        middlewares && index < middlewares.length &&
             middlewares[index](ctx, () => execStep(index + 1))
     }
     execStep(0)

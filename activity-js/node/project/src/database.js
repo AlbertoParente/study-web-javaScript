@@ -6,7 +6,7 @@ const sequence = {
 const products = {}
 
 function saveProduct(product) {
-    if(!product.id) product.id = sequence.id
+    if (!product.id) product.id = sequence.id
     products[product.id] = product
     return product
 }
