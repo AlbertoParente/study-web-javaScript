@@ -1,12 +1,13 @@
 body {
-  background-color: #444;
-  background-image: url(b2422a31d6f8433b2334c1626a39aed3.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 90vh; }
+    background-color: #444;
+    background-image: url(b2422a31d6f8433b2334c1626a39aed3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+}
 
 .button {
-  background-color: #19B3E6;
-  color: #fff;
-  font-size: 1.8em; }
-
+    background-color: #19B3E6;
+    color: #fff;
+    font-size: 1.8em;
+}

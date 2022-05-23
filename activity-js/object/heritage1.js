@@ -14,6 +14,6 @@ console.log(ferrari.__proto__ === Object.prototype)
 console.log(volvo.__proto__ === Object.prototype)
 console.log(Object.prototype.__proto__ === null)
 
-function MyObject() {}
+function MyObject() { }
 console.log(typeof Object, typeof MyObject)
 console.log(Object.prototype, MyObject.prototype)

@@ -2,7 +2,7 @@ const sequence = {
     _value: 1, // Convention
     get value() { return this._value++ },
     set value(value) {
-        if(value > this._value) {
+        if (value > this._value) {
             this._value = value
         }
     }

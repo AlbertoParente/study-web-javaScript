@@ -15,18 +15,18 @@ const car = {
         name: 'Alberto Parente',
         age: 27,
         adress: {
-        streetAdress: 'Teste',
-        number: 01
+            streetAdress: 'Teste',
+            number: 01
         }
     },
     conductors: [{
         name: 'Juliana',
         age: 23
-    },{
+    }, {
         name: 'Maria',
         age: 30
     }],
-    calculateInsuranceValue: function() {
+    calculateInsuranceValue: function () {
         // ...
     }
 }

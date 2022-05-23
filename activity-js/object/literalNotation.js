@@ -17,7 +17,7 @@ const obj4 = { [nameAttr]: valueAttr }
 console.log(obj4)
 
 const obj5 = {
-    function1: function() {
+    function1: function () {
         // ...
     },
     function2() {

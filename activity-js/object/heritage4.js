@@ -1,4 +1,4 @@
-function MyObject() {}
+function MyObject() { }
 console.log(MyObject.prototype)
 
 const Obj1 = new MyObject
@@ -7,7 +7,7 @@ console.log(Obj1.__proto__ === Obj2.__proto__)
 console.log(MyObject.prototype === Obj1.__proto__)
 
 MyObject.prototype.name = 'Anonymous'
-MyObject.prototype.speak = function() {
+MyObject.prototype.speak = function () {
     console.log(`Good Morning! My name is ${this.name}!`)
 }
 

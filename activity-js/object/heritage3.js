@@ -1,5 +1,5 @@
 const father = { name: 'Alberto', colorHair: 'Black' }
- 
+
 const daughter1 = Object.create(father)
 daughter1.name = 'Juliana'
 console.log(daughter1.colorHair)
@@ -15,7 +15,7 @@ console.log(`${daughter2.name} wiht hair ${daughter2.colorHair}`)
 console.log(Object.keys(daughter1))
 console.log(Object.keys(daughter2))
 
-for(let key in daughter2) {
+for (let key in daughter2) {
     daughter2.hasOwnProperty(key) ?
         console.log(key) : console.log(`By inheritance: ${key}`)
 }

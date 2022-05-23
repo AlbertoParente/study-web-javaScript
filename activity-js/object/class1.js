@@ -8,8 +8,8 @@ class Launch {
 class FinancialCycle {
     constructor(month, year) {
         this.month = month,
-        this.year = year,
-        this.launches = []
+            this.year = year,
+            this.launches = []
     }
 
     addLaunches(...launch) {
