@@ -12,14 +12,14 @@ var table = require("./table")(expression)
 
 console.log("============================================================")
 console.log("====================\tFirsts\t============================")
-for(let productionFirst of productionsFirsts) {
-  console.log("First " + productionFirst.variable + " = " + productionFirst.firsts)
+for (let productionFirst of productionsFirsts) {
+    console.log("First " + productionFirst.variable + " = " + productionFirst.firsts)
 }
 
 console.log("============================================================");
 console.log("====================\tFollowers\t====================")
-for(let productionFollower of productionsFollowers) {
-  console.log("Follow " + productionFollower.variable + " = " + productionFollower.followers)
+for (let productionFollower of productionsFollowers) {
+    console.log("Follow " + productionFollower.variable + " = " + productionFollower.followers)
 }
 console.log("============================================================")
 console.log("====================\tPreditive Table\t====================")

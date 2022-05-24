@@ -14,31 +14,31 @@ server.on("message", (msg, info) => {
     console.log("Server received from the player: " + data.user + "\nA PlayerMove: " + data.playerMove);
     playerMoves.push({ user: data.user, jogada: data.playerMove, port: info.port })
 
-    if(playerMoves.length > 1) {
+    if (playerMoves.length > 1) {
         var winner = Buffer.from('You Winner!');
         var lost = Buffer.from('You Lost!');
 
-        if(((playerMoves[0].playerMove + playerMoves[1].jogada) % 2) == 0) {
+        if (((playerMoves[0].playerMove + playerMoves[1].jogada) % 2) == 0) {
             server.send(winner, jogadas[0].port, 'localhost', (error) => {
-                if(error) {
+                if (error) {
                     client.close();
                 }
             });
 
             server.send(lost, playerMoves[1].port, 'localhost', (error) => {
-                if(error) {
+                if (error) {
                     client.close();
                 }
             });
         } else {
             server.send(winner, playerMoves[1].port, 'localhost', (error) => {
-                if(error) {
+                if (error) {
                     client.close();
                 }
             });
 
             server.send(lost, playerMoves[0].port, 'localhost', (error) => {
-                if(error) {
+                if (error) {
                     client.close();
                 }
             });

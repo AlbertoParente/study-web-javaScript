@@ -1,8 +1,8 @@
 {
-  "dependencies": {
-    "prompt-sync": "^4.2.0"
-  },
-  "scripts": {
-    "start": "node main.js"
-  }
+    "dependencies": {
+        "prompt-sync": "^4.2.0"
+    },
+    "scripts": {
+        "start": "node main.js"
+    }
 }

@@ -1,13 +1,13 @@
 {
-  "devDependencies": {
-    "jest": "^26.4.2",
-    "jquery": "3.5.1",
-    "nodemon": "^2.0.4"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.8"
-  }
+    "devDependencies": {
+        "jest": "^26.4.2",
+        "jquery": "3.5.1",
+        "nodemon": "^2.0.4"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome": "^1.1.8"
+    }
 }

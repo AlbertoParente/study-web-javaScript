@@ -1,15 +1,15 @@
 {
-  "name": "connectionsqlserver",
-  "version": "1.0.0",
-  "description": "connectionSqlServer2014",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Alberto Parente",
-  "license": "ISC",
-  "dependencies": {
-    "mssql": "^6.2.2",
-    "tedious": "^9.2.1"
-  }
+    "name": "connectionsqlserver",
+    "version": "1.0.0",
+    "description": "connectionSqlServer2014",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Alberto Parente",
+    "license": "ISC",
+    "dependencies": {
+        "mssql": "^6.2.2",
+        "tedious": "^9.2.1"
+    }
 }
