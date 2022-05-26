@@ -6,6 +6,7 @@ const students = [
 ]
 
 console.log(students.map(a => a.note))
+
 const result = students.map(a => a.note).reduce(function (accumulator, actual) {
     console.log(accumulator, actual)
     return accumulator + actual

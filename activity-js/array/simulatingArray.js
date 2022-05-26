@@ -8,4 +8,5 @@ Object.defineProperty(almostArray, 'toString', {
 console.log(almostArray[0])
 
 const myArray = ['Juliana', 'Alberto', 'Julia']
+
 console.log(almostArray.toString(), myArray)

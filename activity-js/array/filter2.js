@@ -14,7 +14,6 @@ const product = [
     { name: 'Glass', price: 12.49, fragile: true },
     { name: 'Plastic Cup', price: 18.99, fragile: true }
 ]
-
 const car = product => product.price >= 500
 const fragile = product => product.fragile
 

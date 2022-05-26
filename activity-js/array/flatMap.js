@@ -20,10 +20,9 @@ const school = [{
 
 const getNoteFromStudent = student => student.note
 const getNotesFromClass = theClass => theClass.students.map(getNoteFromStudent)
-
 const notes1 = school.map(getNotesFromClass)
-console.log(notes1)
 
+console.log(notes1)
 console.log([].concat([8.1, 9.3], [8.9, 7.3]))
 
 Array.prototype.flatMap = function (callback) {

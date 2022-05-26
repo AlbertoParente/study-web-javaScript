@@ -6,7 +6,9 @@ const students = [
 ]
 
 const allScholarship = (result, scholarship) => result && scholarship
+
 console.log(students.map(a => a.scholarship).reduce(allScholarship))
 
 const someScholarship = (result, scholarship) => result || scholarship
+
 console.log(students.map(a => a.scholarship).reduce(someScholarship))

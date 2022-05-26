@@ -14,4 +14,5 @@ console.log(total1 / students.length)
 const getNote = students => students.note
 const sum = (total, actual) => total + actual
 const total2 = students.map(getNote).reduce(sum)
+
 console.log(total2 / students.length)

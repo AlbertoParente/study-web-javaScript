@@ -1,4 +1,5 @@
 const value = [7.7, 8.9, 6.3, 9.2]
+
 console.log(value[0], value[3])
 console.log(value[4])
 

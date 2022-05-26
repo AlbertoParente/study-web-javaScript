@@ -9,6 +9,6 @@ const cart = [
 
 const forObject = json => JSON.parse(json)
 const onlyPrice = product => product.price
-
 const result = cart.map(forObject).map(onlyPrice)
+
 console.log(result)
