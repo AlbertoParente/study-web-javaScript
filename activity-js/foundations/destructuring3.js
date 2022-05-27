@@ -6,6 +6,7 @@ function rand({ min = 0, max = 1000 }) {
 console.log(rand({ max: 50, min: 40 }))
 
 const object = { max: 50, min: 40 }
+
 console.log(rand(object))
 console.log(rand({ min: 955 }))
 console.log(rand({}))

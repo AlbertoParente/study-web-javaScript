@@ -6,7 +6,6 @@ console.log(Number.isInteger(weight1), Number.isInteger(weight2))
 
 const evaluation1 = 9.871
 const evaluation2 = 6.871
-
 const total = evaluation1 * weight1 + evaluation2 * weight2
 const average = total / (weight1 + weight2)
 

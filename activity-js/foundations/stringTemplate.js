@@ -11,4 +11,5 @@ console.log(concatenation, template)
 console.log(`1 + 1 = ${1 + 1}`)
 
 const up = text => text.toUpperCase()
+
 console.log(`Hey... ${up('Attention')}!`)

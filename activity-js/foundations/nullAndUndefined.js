@@ -13,6 +13,7 @@ console.log(c)
 */
 
 let value
+
 console.log(value)
 
 value = null
@@ -20,6 +21,7 @@ console.log(value)
 //console.log(value.toString()) // Erro!
 
 const product = {}
+
 console.log(product.price)
 console.log(product)
 

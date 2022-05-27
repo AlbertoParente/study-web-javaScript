@@ -1,4 +1,5 @@
 let any = 'Legal'
+
 console.log(any)
 console.log(typeof any) // Type
 

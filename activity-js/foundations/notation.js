@@ -18,6 +18,7 @@ function object(name) {
 
 const object2 = new object('chair')
 const object3 = new object('desk')
+
 console.log(object2.name)
 console.log(object3.name)
 object3.exec()

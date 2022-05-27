@@ -1,11 +1,15 @@
 // Using var
 console.log('a =', a)
+
 var a = 2
+
 console.log('a =', a)
 
 function test1() {
     console.log('a =', a)
+
     var a = 3
+
     console.log('a =', a)
 }
 
@@ -15,6 +19,7 @@ test1()
 
 // console.log('b =', b)
 let b = 2
+
 console.log('b =', b)
 
 function test2() {
