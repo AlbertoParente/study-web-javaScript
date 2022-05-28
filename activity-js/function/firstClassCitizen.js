@@ -13,10 +13,12 @@ const fun2 = function () {
 
 // In array
 const array = [function (a, b) { return a + b }, fun1, fun2]
+
 console.log(array[0](2, 3))
 
 // In attribute of object
 const obj = {}
+
 obj.speak = function () { return 'hello' }
 console.log(obj.speak())
 
@@ -35,5 +37,7 @@ function sum(a, b) {
 }
 
 sum(2, 3)(4)
+
 const fiveMore = sum(2, 3)
+
 fiveMore(4)

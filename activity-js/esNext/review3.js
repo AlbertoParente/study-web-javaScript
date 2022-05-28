@@ -1,5 +1,6 @@
 // ES8: Object.values / Object.entries
 const obj = { a: 1, b: 2, c: 3 }
+
 console.log(Object.values(obj))
 console.log(Object.entries(obj))
 
@@ -11,6 +12,7 @@ const person = {
         return 'Hello person...!'
     }
 }
+
 console.log(person.name, person.hello())
 
 // Class
@@ -20,4 +22,5 @@ class Dog extends Animal {
         return 'Au Au!'
     }
 }
+
 console.log(new Dog().speak())

@@ -18,7 +18,6 @@ const car = { price: 5000, desc: 0.20 }
 
 console.log(getPrice.call(car))
 console.log(getPrice.apply(car))
-
 console.log(getPrice.call(car, 0.17, '$'))
 console.log(getPrice.apply(car, [0.17, '$']))
 console.log(getPrice.apply(global, [0.17, '$']))

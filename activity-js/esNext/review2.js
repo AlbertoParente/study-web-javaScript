@@ -1,10 +1,12 @@
 // Arrow Function
 const sum = (a, b) => a + b
+
 console.log(sum(2, 3))
 
 // Arrow Function (this)
 const lexical1 = () => console.log(this === exports)
 const lexical2 = lexical1.bind({})
+
 lexical1()
 lexical2()
 

@@ -9,4 +9,5 @@ function outside() {
 }
 
 const myFunction = outside()
+
 console.log(myFunction())

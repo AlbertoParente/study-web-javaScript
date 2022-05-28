@@ -6,4 +6,5 @@ function tag(parts, ...values) {
 
 const student = 'Alberto'
 const situation = 'Aproved'
+
 console.log(tag`${student} it is ${situation}...!`)

@@ -16,6 +16,7 @@ const getGroup = (letter, callback) => {
 }
 
 let names = []
+
 getGroup('A', students => {
     names = names.concat(students.map(a => `A: ${a.nome}`))
     getGroup('B', students => {

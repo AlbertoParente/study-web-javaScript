@@ -7,4 +7,5 @@ function Person(name) {
 }
 
 const p1 = new Person('João!')
+
 p1.speak()

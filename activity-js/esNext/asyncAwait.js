@@ -1,7 +1,9 @@
 const http = require('http')
 
 const getGroup = letter => {
+
     const url = `http://files.cod3r.com.br/curso-js/turma${letter}.json`
+
     return new Promise((resolve, reject) => {
         http.get(url, res => {
             let result = ''
@@ -22,9 +24,11 @@ const getGroup = letter => {
 }
 
 let getStudents = async () => {
+
     const groupA = await getGroup('A')
     const groupB = await getGroup('B')
     const groupC = await getGroup('C')
+
     return [].concat(groupA, groupB, groupC)
 }
 

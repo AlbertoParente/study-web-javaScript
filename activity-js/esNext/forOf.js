@@ -35,6 +35,7 @@ for (let [keys, value] of subjectsMap.entries()) {
 }
 
 const s = new Set(['a', 'b', 'c'])
+
 for (let letter of s) {
     console.log(letter)
 }

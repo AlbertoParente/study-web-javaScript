@@ -15,14 +15,15 @@ function Car(maximumSpeed = 200, delta = 5) {
 }
 
 const uno = new Car
+
 uno.sppedUp()
 console.log(uno.getCurrentSpeed())
 
 const ferrari = new Car(350, 20)
+
 ferrari.sppedUp()
 ferrari.sppedUp()
 ferrari.sppedUp()
 console.log(uno.getCurrentSpeed())
-
 console.log(typeof Car)
 console.log(typeof ferrari)
