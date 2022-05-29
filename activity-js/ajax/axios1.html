@@ -13,6 +13,7 @@
 
     <script>
         const url = 'dados/states.json'
+
         axios(url).then(resp => {
             const itens = resp.data.reduce(
                 (html, state) => html + `<li>${state.name}</li>`, ''

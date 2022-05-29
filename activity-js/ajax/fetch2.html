@@ -34,6 +34,7 @@
 
             const form = e.target
             const data = new FormData(form)
+
             data.append('ajax', true)
 
             const options = {
@@ -53,6 +54,7 @@
             try {
                 const resp = await fetch(form.action, options)
                 const json = await resp.json()
+
                 result.innerHTML = JSON.stringify(json)
             } catch (e) {
                 result.innerHTML = e

@@ -13,6 +13,7 @@
     <script>
         function ajax(config) {
             const xhr = new XMLHttpRequest()
+
             xhr.open(config.method, config.url, true)
 
             xhr.onreadystatechange = e => {
@@ -43,6 +44,7 @@
             },
             erro(e) {
                 const msg = document.createTextNode(`${e.codigo}: ${e.text}`)
+
                 document.body.appendChild(msg)
             }
         })
