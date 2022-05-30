@@ -1,5 +1,6 @@
 function getRandomIntegerBetween(min, max) {
     const value = Math.random() * (max - min) + min
+
     return Math.floor(value)
 }
 

@@ -1,6 +1,7 @@
 Array.prototype.reduce2 = function (callback, initialValue) {
     const initialIndex = initialValue ? 0 : 1
     let accumulator = initialValue || this[0]
+
     for (let i = initialIndex; i < this.length; i++) {
         accumulator = callback(accumulator, this[i], i, this)
     }

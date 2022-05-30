@@ -9,6 +9,7 @@ for (let i = 0; i <= 10; i++) {
 }
 
 const note = [6.7, 7.4, 9.8, 8.1, 7.7]
+
 for (let i = 0; i < note.length; i++) {
     console.log(`Note = ${note[i]}`)
 }

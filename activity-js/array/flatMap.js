@@ -30,4 +30,5 @@ Array.prototype.flatMap = function (callback) {
 }
 
 const notes2 = school.flatMap(getNotesFromClass)
+
 console.log(notes2)

@@ -3,11 +3,13 @@
         if (!hash) return
 
         const link = document.querySelector(`[attr-link='${hash}']`)
+
         if (!link) return
 
         const destin = document.querySelector('[attr-link-destin]')
 
         const url = hash.substring(1)
+
         fetch(url)
             .then(resp => resp.text())
             .then(html => {

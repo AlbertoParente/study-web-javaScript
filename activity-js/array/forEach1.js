@@ -12,4 +12,5 @@ approveds.forEach(function (name, index, array) {
 approveds.forEach(name => console.log(name))
 
 const printApproveds = approved => console.log(approved)
+
 approveds.forEach(printApproveds)

@@ -5,6 +5,7 @@ const students = [
 
 // Imperative
 let total1 = 0
+
 for (let i = 0; i < students.length; i++) {
     total1 += students[i].note
 }
