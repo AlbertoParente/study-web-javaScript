@@ -7,7 +7,6 @@ console.log(!true)
 console.log(!!true)
 console.log(!false)
 console.log(!!false)
-
 isAtivo = 1
 console.log(!!isAtivo)
 console.log("It's true...")

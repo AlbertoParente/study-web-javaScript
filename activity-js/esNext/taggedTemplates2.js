@@ -1,5 +1,6 @@
 function real(parts, ...values) {
     const result = []
+
     values.forEach((value, index) => {
         value = isNaN(value) ? value : `R$${value.toFxed(2)}`
         result.push(parts[index], value)

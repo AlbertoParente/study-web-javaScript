@@ -2,6 +2,7 @@ const http = require('http')
 
 const getGroup = letter => {
     const url = `http://files.cod3r.com.br/curso-js/turma${letter}.json`
+
     return new Promise((resolve, reject) => {
         http.get(url, res => {
             let result = ''

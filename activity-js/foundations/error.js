@@ -21,4 +21,5 @@ function printNameUppercase(obj) {
 }
 
 const obj = { name: 'Alberto' }
+
 printNameUppercase(obj)

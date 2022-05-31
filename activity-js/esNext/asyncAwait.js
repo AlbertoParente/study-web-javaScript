@@ -24,7 +24,6 @@ const getGroup = letter => {
 }
 
 let getStudents = async () => {
-
     const groupA = await getGroup('A')
     const groupB = await getGroup('B')
     const groupC = await getGroup('C')

@@ -1,8 +1,8 @@
 const product1 = {}
+
 product1.name = 'Ultra Mega Cell Phone'
 product1.price = 4998.90
 product1['legal discount'] = 0.40
-
 console.log(product1)
 
 const product2 = {
