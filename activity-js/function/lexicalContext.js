@@ -6,6 +6,7 @@ function myFunction() {
 
 function exec() {
     const value = 'Location'
+
     myFunction()
 }
 

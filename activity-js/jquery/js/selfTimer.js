@@ -4,17 +4,14 @@
             message: 'Coming soon!!!',
             time: '23:59:59'
         }, options)
-
         const hourTens = $('<span class="digit">').html('0')
         const hourUnit = $('<span class="digit">').html('0')
         const minuteTens = $('<span class="digit">').html('0')
         const minuteUnit = $('<span class="digit">').html('0')
         const secondTens = $('<span class="digit">').html('0')
         const secondUnit = $('<span class="digit">').html('0')
-
         const separatorHour = $('<span class="separator">').html(':')
         const separatorMinute = $('<span class="separator">').html(':')
-
         const message = $('<span class="message">').html(optionsFinal.message)
 
         $(this).addClass('selfTimer')
@@ -28,11 +25,13 @@
         let selfTimer = setInterval(() => {
             const now = new Date()
             const target = new Date()
+
             target.setHours(hourTarget[1])
             target.setMinutes(hourTarget[2])
             target.setSeconds(hourTarget[3])
 
             const differenceInMilliseconds = target.getTime() - now.getTime()
+
             if (differenceInMilliseconds >= 0) {
                 const difference = regex.exec(new Date(differenceInMilliseconds).toISOString())
                 // console.log(difference)

@@ -4,15 +4,14 @@ let compareWithThis = function (param) {
 
 compareWithThis(global)
 
-const obj = {
-
-}
+const obj = { }
 
 compareWithThis = compareWithThis.bind(obj)
 compareWithThis(global)
 compareWithThis(obj)
 
 let compareWithThis = parm => console.log(this === param)
+
 compareWithThis(global)
 compareWithThis(module.exports)
 

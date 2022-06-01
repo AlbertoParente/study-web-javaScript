@@ -9,6 +9,7 @@ class Person {
 }
 
 const p1 = new Person('João!')
+
 p1.speak()
 
 const createPerson = name => {
@@ -18,4 +19,5 @@ const createPerson = name => {
 }
 
 const p2 = createPerson('João!')
+
 p2.speak()

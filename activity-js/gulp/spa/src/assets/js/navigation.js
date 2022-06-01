@@ -1,9 +1,11 @@
 (function () {
     function markLinkAsSelected(hash) {
         const links = document.querySelectorAll(`[attr-link]`)
+
         links.forEach(link => link.classList.remove('selected'))
 
         const link = document.querySelector(`[attr-link='${hash}']`)
+
         link.classList.add('selected')
     }
 
@@ -12,8 +14,8 @@
 
         const link = document.querySelector(`[attr-link='${hash}']`)
         const destin = document.querySelector('[attr-link-destin]')
-
         const url = hash.substring(1)
+
         fetch(url)
             .then(resp => resp.text())
             .then(html => {

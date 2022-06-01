@@ -5,6 +5,7 @@ function show(v: Vendible) {
 }
 
 const c = new Car
+
 c.name = 'Civic'
 c.price = 89499.00
 show(c)
