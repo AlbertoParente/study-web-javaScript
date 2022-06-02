@@ -18,6 +18,7 @@ class FinancialCycle {
 
     summary() {
         let valueConsolidated = 0
+
         this.launches.forEach(l => {
             valueConsolidated += l.value
         })
@@ -27,7 +28,7 @@ class FinancialCycle {
 
 const salary = new Launch('Salary', 4000)
 const electricityBill = new Launch('Electricity', -60)
-
 const bills = new FinancialCycle(4, 2020)
+
 bills.addLaunches(salary, electricityBill)
 console.log(bills.summary())

@@ -4,6 +4,7 @@ const product = Object.preventExtensions({
     price: 599.99,
     tag: 'Promotion'
 })
+
 console.log('Extensible:', Object.isExtensible(product))
 
 product.name = 'Ball'
@@ -13,6 +14,7 @@ console.log(product)
 
 // Object.seal
 const person = { name: 'Juliana', age: 23 }
+
 Object.seal(person)
 console.log('Sealed:', Object.isSealed(person))
 

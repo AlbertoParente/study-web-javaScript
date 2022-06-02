@@ -1,5 +1,6 @@
 // Dynamic collection of key/value pairs
 const product = new Object
+
 product.name = 'Chair'
 product['Product brand'] = 'Generic'
 product.price = 500
@@ -8,6 +9,7 @@ console.log(product)
 delete product.price
 delete product['Product brand']
 console.log(product)
+
 const car = {
     model: 'A5',
     value: '100000',

@@ -1,6 +1,6 @@
 const father = { name: 'Alberto', colorHair: 'Black' }
-
 const daughter1 = Object.create(father)
+
 daughter1.name = 'Juliana'
 console.log(daughter1.colorHair)
 
@@ -11,7 +11,6 @@ const daughter2 = Object.create(father, {
 console.log(daughter2.name)
 daughter2.name = 'Amanda'
 console.log(`${daughter2.name} wiht hair ${daughter2.colorHair}`)
-
 console.log(Object.keys(daughter1))
 console.log(Object.keys(daughter2))
 

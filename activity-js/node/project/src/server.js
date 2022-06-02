@@ -1,5 +1,4 @@
 const port = 3003
-
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -34,6 +33,7 @@ app.put('/products/:id', (req, res, next) => {
 
 app.delete('/products/:id', (req, res, next) => {
     const product = database.deleteProduct(req.params.id)
+
     res.send(product) // Convert in JSON
 })
 

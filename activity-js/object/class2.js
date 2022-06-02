@@ -18,4 +18,5 @@ class Child extends Father {
 }
 
 const child = new Child
+
 console.log(child)

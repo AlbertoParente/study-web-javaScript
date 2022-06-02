@@ -21,6 +21,7 @@ function getProductsAll() {
 
 function deleteProduct(id) {
     const product = products[id]
+
     delete products[id]
     return product
 }

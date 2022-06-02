@@ -20,5 +20,6 @@ const exec = (ctx, ...middlewares) => {
 }
 
 const ctx = {}
+
 exec(ctx, step1, step2, step3)
 console.log(ctx)

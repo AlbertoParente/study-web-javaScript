@@ -1,7 +1,5 @@
 const fs = require('fs')
-
 const directory = __dirname + '/file.json'
-
 // Synchronous...
 const content = fs.readFileSync(directory, 'UTF-8')
 console.log(content)
@@ -9,10 +7,12 @@ console.log(content)
 // Asynchronous...
 fs.readFile(directory, 'UTF-8', (err, content) => {
     const config = JSON.parse(content)
+
     console.log(`${config.db.host}:${config.db.port}`)
 })
 
 const config = require('./file.json')
+
 console.log(config.db)
 
 fs.readdir(__dirname, (err, file) => {

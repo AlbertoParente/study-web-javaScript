@@ -1,4 +1,5 @@
 const moduleA = require('../../moduleA')
+
 console.log(moduleA.hello)
 
 // or

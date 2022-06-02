@@ -3,6 +3,7 @@ console.log(MyObject.prototype)
 
 const Obj1 = new MyObject
 const Obj2 = new MyObject
+
 console.log(Obj1.__proto__ === Obj2.__proto__)
 console.log(MyObject.prototype === Obj1.__proto__)
 
@@ -12,11 +13,11 @@ MyObject.prototype.speak = function () {
 }
 
 Obj1.speak()
-
 Obj2.name = 'Dennys'
 Obj2.speak()
 
 const obj3 = {}
+
 obj3.__proto__ = MyObject.prototype
 obj3.name = 'obj3'
 obj3.speak()
