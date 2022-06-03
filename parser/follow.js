@@ -51,6 +51,7 @@ var followers = function follow(gramatic) {
 // Aqui eu procuro o first de cada expressão
 function searchFirstExpression(e, firsts) {
     let returnableProduction
+
     for (let first of firsts) {
         if (first.variable === e) {
             returnableProduction = first.firsts

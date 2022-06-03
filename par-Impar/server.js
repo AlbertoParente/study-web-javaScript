@@ -51,6 +51,7 @@ server.on("message", (msg, info) => {
 
 server.on("listening", () => {
     var address = server.address();
+
     console.log("Server Listening " +
         address.address + ":" + address.port);
 });

@@ -77,7 +77,6 @@ function infoTable(gramatic) {
     variables = [...new Set(variables)] // torno os valores unicos caso se repitão
     terminalSymbols = [...new Set(terminalSymbols)] // torno os valores unicos caso se repitão
     terminalSymbols = terminalSymbols.sort()  // Aqui eu ordeno
-
     info.push(variables)
     info.push(terminalSymbols)
 

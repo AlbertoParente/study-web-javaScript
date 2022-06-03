@@ -5,6 +5,7 @@ var firsts = function first(gramatic) {
     for (let production of productions) {
         let count = 0
         let hadReplacement = false
+
         for (var i = 0; i < production.possibleFirstElements.length; i++) {
 
             // Aqui eu faço as verificações se o elemento é um simbolo terminal, uma variavel ou epslo
