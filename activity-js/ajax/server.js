@@ -42,5 +42,4 @@ app.get('/evenOrOdd', (req, res) => {
     })
 })
 
-// app.get('/test', (req, res) => res.send('Ok'))
 app.listen(8080, () => console.log('Server is running...'))

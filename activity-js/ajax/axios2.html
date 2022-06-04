@@ -19,18 +19,11 @@
             document.getElementById(id).innerHTML = text
         }
 
-        // axios('evenOrOdd?number=7').then(resp => showResult('get', resp.data))
-
         axios.get('evenOrOdd', {
             params: {
                 number: 6
             }
         }).then(resp => showResult('get', resp.data))
-
-        // axios.post('formulary', {
-        //     name: 'Alberto',
-        //     surname: 'Parente'
-        // }).then(resp => showResult('post', resp.data))
 
         axios.post('formulary', {
             name: 'Alberto',
